@@ -1,0 +1,4 @@
+    text_state:
+        component: meya.text
+        properties:
+            text: Your text here

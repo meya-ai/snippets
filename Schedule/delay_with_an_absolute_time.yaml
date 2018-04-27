@@ -1,0 +1,4 @@
+    delay_state_abs:
+        component: meya.pass
+        delay:
+            absolute: 1508522400

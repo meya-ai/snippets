@@ -1,0 +1,42 @@
+    multi_card_state:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+                - title: element_1_title
+                  text: element_1_text
+                  item_url: "https://en.wikipedia.org"
+                  image_url: "https://upload.wikimedia.org/wikipedia/commons/7/71/2010-kodiak-bear-1.jpg"
+                  buttons:
+                    - text: e1_link_button
+                      url: "https://en.wikipedia.org"
+                    - text: e1_transition_button
+                      action: next
+                    - text: e1_start_button
+                      flow: your_flow
+                - title: element_2_title
+                  text: element_2_text
+                  item_url: "https://en.wikipedia.org"
+                  image_url: "http://pipsum.com/295x221.jpg"
+                  buttons:
+                    - text: e2_link_button
+                      url: "https://en.wikipedia.org"
+                    - text: e2_transition_button
+                      action: next
+                    - text: e2_start_button
+                      flow: your_flow
+                - title: element_N_title
+                  text: element_N_text
+                  item_url: "https://en.wikipedia.org"
+                  image_url: "https://upload.wikimedia.org/wikipedia/commons/7/71/2010-kodiak-bear-1.jpg"
+                  buttons:
+                    - text: e3_link_button
+                      url: "https://en.wikipedia.org"
+                    - text: e3_transition_button
+                      action: next
+                    - text: e3_start_button
+                      flow: your_flow
+    next_state:
+        component: meya.text
+        properties:
+            text: The next state {{ flow.button_click }}

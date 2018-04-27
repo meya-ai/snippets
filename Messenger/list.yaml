@@ -1,0 +1,33 @@
+    list_state:
+        component: meya.list
+        properties:
+            top_element_style: large
+            buttons:
+                - text: "button_text"
+                  action: next
+            elements:
+                - title: element 1
+                  subtitle: element 1 subtitle
+                  image_url: "http://pipsum.com/60x60.jpg"
+                  buttons:
+                    - text: e1_transition_button
+                      action: next
+                  default_action:
+                    url: "https://example.com/path"
+                    webview_height_ratio: tall
+                - title: element 2
+                  subtitle: element 2 subtitle
+                  image_url: "http://pipsum.com/60x60.jpg"
+                  buttons:
+                    - text: e2_link_button
+                      url: "https://example.com/path"
+                      webview_height_ratio: tall
+                  default_action:
+                    url: "https://example.com/path"
+                    webview_height_ratio: tall
+                - title: element 3
+                  subtitle: element 3 subtitle
+                  image_url: "http://pipsum.com/60x60.jpg"
+                  buttons:
+                    - text: e3_start_button
+                      flow: flow_name

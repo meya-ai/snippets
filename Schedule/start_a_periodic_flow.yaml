@@ -1,0 +1,8 @@
+    start_schedule_state:
+        flow: meya.schedule
+        data:
+            tag: your_tag
+            flow: your_flow
+            period: minutes
+            interval: 2
+            max_count: 30

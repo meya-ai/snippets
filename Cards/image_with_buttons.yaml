@@ -1,0 +1,16 @@
+    image_buttons_state:
+        component: meya.image_buttons
+        properties:
+            image_url: "https://upload.wikimedia.org/wikipedia/commons/7/71/2010-kodiak-bear-1.jpg"
+            output: button_click
+            buttons:
+                - text: button_1
+                  action: next
+                  data:
+                    foo: bar
+                - text: button_2
+                  action: next
+    next_state:
+        component: meya.text
+        properties:
+            text: You clicked {{ flow.button_click }}

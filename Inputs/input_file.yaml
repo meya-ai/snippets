@@ -1,0 +1,6 @@
+    input_file_state:
+        component: meya.input_file
+        properties:
+            text: Your question here
+            output: file_url
+            scope: flow

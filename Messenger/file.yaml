@@ -1,0 +1,4 @@
+    file_attachment_state:
+        component: meya.file
+        properties:
+            url: 'your_file_url'

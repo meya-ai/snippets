@@ -1,0 +1,6 @@
+    input_image_state:
+        component: meya.input_image
+        properties:
+            text: Your question here
+            output: image_url
+            scope: flow

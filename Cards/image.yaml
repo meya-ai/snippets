@@ -1,0 +1,4 @@
+    image_card_state:
+        component: meya.image
+        properties:
+            image_url: 'https://upload.wikimedia.org/wikipedia/commons/7/71/2010-kodiak-bear-1.jpg'

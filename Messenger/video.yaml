@@ -1,0 +1,4 @@
+    video_attachment_state:
+        component: meya.video
+        properties:
+            url: 'your_video_url'
