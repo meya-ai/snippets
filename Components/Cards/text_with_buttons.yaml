@@ -1,0 +1,16 @@
+    text_buttons_state:
+        component: meya.text_buttons
+        properties:
+            text: Your text here
+            output: button_click
+            buttons:
+                - text: button_1
+                  action: next
+                  data:
+                    foo: bar
+                - text: button_2
+                  action: next
+    next_state:
+        component: meya.text
+        properties:
+            text: You clicked {{ flow.button_click }}

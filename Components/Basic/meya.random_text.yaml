@@ -1,0 +1,7 @@
+    random_text_state:
+        component: meya.random_text
+        properties:
+            responses:
+                - Text option 1
+                - Text option 2
+                - Text option N

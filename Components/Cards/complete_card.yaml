@@ -1,0 +1,22 @@
+    card_state:
+        component: meya.card
+        properties:
+            title: Your title here
+            text: Your text here
+            image_url: "https://upload.wikimedia.org/wikipedia/commons/7/71/2010-kodiak-bear-1.jpg"
+            output: button_click
+            buttons:
+                - text: button_1
+                  action: button_action
+                  data:
+                    foo: bar
+                - text: button_2
+                  action: button_action
+                  data:
+                    foo: boo
+        transitions:
+            button_action: state_to_go_to
+    state_to_go_to:
+        component: meya.text
+        properties:
+            text: You clicked {{ flow.button_click }}. Your data is {{ flow.foo }}

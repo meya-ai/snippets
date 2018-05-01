@@ -1,0 +1,7 @@
+    start_cron_schedule:
+        flow: meya.schedule
+        data:
+            tag: your_tag
+            flow: your_flow
+            cron: "* * * * *"
+            timezone: UTC

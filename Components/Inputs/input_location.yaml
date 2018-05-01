@@ -1,0 +1,6 @@
+    input_location_state:
+        component: meya.input_location
+        properties:
+            text: Your question here
+            output: your_key
+            scope: user

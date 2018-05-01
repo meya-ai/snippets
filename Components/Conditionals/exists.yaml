@@ -1,0 +1,18 @@
+    exist_check_state:
+        component: meya.conditional_exists
+        properties:
+            scope: flow
+            key: your_key
+        transitions:
+            exists: exists_state
+            notexists: notexists_state
+    exists_state:
+        component: meya.text
+        properties:
+            text: Exists
+        return: true
+    notexists_state:
+        component: meya.text
+        properties:
+            text: Does not exist
+        return: true
