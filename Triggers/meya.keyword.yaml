@@ -1,0 +1,4 @@
+  - type: meya.keyword
+    settings:
+        ignorecase: true
+        keyword: KEYWORD_GOES_HERE
