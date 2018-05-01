@@ -1,0 +1,4 @@
+  - type: meya.keyword
+    settings:
+        ignorecase: true
+        keyword: card
