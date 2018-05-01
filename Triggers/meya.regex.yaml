@@ -1,0 +1,6 @@
+triggers:
+  - type: meya.regex
+    settings:
+        ignorecase: true
+        pattern: REGEX_GOES_HERE
+        capture_text: true
