@@ -1,3 +1,4 @@
+triggers:
   - type: meya.keyword
     settings:
         ignorecase: true
