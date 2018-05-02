@@ -2,11 +2,24 @@
 docstring: |
     ## meya.text.yaml
     Display text to the user.
-    ## Properties
-    |Property|Description|Required|
-    -|-|-
-    `text`|Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.|*Required*
-    `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
+    ### Properties
+    <table>
+      <tr>
+        <td>Property</td>
+        <td>Description</td>
+        <td>Required</td>
+      </tr>
+      <tr>
+        <td>`text`</td>
+        <td>Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.</td>
+        <td>*Required*</td>
+      </tr>
+      <tr>
+        <td>`speech`</td>
+        <td>Text to speak to the user. This field also accepts SSML markup to customize pronunciation.</td>
+        <td>*Optional. Defaults to value of `text` property*</td>
+      </tr>
+    </table>
 language: yaml
 tags: []
 expanded: false

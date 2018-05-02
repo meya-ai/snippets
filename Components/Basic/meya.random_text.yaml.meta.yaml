@@ -2,10 +2,19 @@
 docstring: |
     ## meya.random_text.yaml
     Randomly select one text option to display to the user.
-    ## Properties
-    |Property|Description|Required|
-    -|-|-
-    `responses`|A YAML list of possible responses. Can include Mustache syntax: `{{ flow.value }}`.|*At least one response is required*
+    ### Properties
+    <table>
+      <tr>
+        <td>Property</td>
+        <td>Description</td>
+        <td>Required</td>
+      </tr>
+      <tr>
+        <td>`responses`</td>
+        <td>A YAML list of possible responses. Can include Mustache syntax: `{{ flow.value }}`.</td>
+        <td>*At least one response is required*</td>
+      </tr>
+    </table>
 language: yaml
 tags: []
 expanded: false
