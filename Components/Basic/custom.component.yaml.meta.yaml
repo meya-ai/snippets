@@ -1,7 +1,10 @@
 ---
 docstring: |
     ## custom.component.yaml
-    *TODO*
+    Use a custom Python component.
+    ## Properties
+    You may pass data into the component by defining custom variables in the `properties` field. Within the custom component these variables can be accessed using:
+    `self.properties.get("my_property_name")`
 language: yaml
 tags: []
 expanded: false
