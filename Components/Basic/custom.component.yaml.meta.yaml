@@ -5,6 +5,28 @@ docstring: |
     ### Properties
     You may pass data into the component by defining custom variables in the `properties` field. Within the custom component these variables can be accessed using:
     `self.properties.get("my_property_name")`
+    ### Example
+    ```yaml
+    custom_state:
+      component: my_component_name
+      properties:
+        num: 1
+        name: "Meya"
+    ```
+    ```python
+    # -*- coding: utf-8 -*-
+    from meya import Component
+
+
+    class MyComponent(Component):
+
+        def start(self):
+            num = self.properties.get("num")
+            name = self.properties.get("name")
+            text = "Hello, {}! You're #{}".format(name, num)
+            message = self.create_message(text=text)
+            return self.respond(message=message, action="next")
+    ```
 language: yaml
 tags: []
 expanded: false

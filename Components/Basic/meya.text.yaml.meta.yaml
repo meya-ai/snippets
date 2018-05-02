@@ -3,8 +3,8 @@ docstring: |
     ## meya.text.yaml
     Display text to the user.
     ### Properties
-    Property|Description|Required
-    --------|-----------|--------
+    | Property | Description | Required |
+    |  :----:  |    :---:    |  :----:  |
     `text`|Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.|*Required*
     `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
 language: yaml
