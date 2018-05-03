@@ -1,7 +1,10 @@
 ---
 docstring: |
     ## text_with_buttons.yaml
-    *TODO*
+    Display text to the user.
+    ### Properties
+    | Property | Description | Required |
+    |  :----:  |    :---:    |  :----:  |
 language: yaml
 tags: []
 expanded: false
