@@ -2,7 +2,7 @@
 docstring: |
     ## meya.video.yaml
     Triggers when someone enters a video.
-    ### Settings
+    ### Properties
     *None.*
 language: yaml
 tags: []

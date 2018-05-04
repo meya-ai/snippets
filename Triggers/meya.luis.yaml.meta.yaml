@@ -2,8 +2,8 @@
 docstring: |
     ## meya.luis.yaml
     Uses third party NLU service Luis.ai, to determine the user's intent and trigger the flow if a matching intent is found.
-    ### Settings
-    | Setting | Description | Required|
+    ### Properties
+    | Property | Description | Required|
     |    ---   |     ---     |   ---   |
     `app_id`|Your Luis.ai app's ID.|*Required*
     `api_key`|Your Luis.ai app's API key.|*Required*

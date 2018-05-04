@@ -2,7 +2,7 @@
 docstring: |
     ## meya.file.yaml
     Triggers when someone uploads a file.
-    ### Settings
+    ### Properties
     *None.*
 language: yaml
 tags: []

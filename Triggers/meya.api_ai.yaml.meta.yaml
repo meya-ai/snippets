@@ -2,8 +2,8 @@
 docstring: |
     ## meya.api_ai.yaml
     Uses third party NLU service Dialogflow, to determine the user's intent and trigger the flow if a matching intent is found.
-    ### Settings
-    | Setting | Description | Required|
+    ### Properties
+    | Property | Description | Required|
     |    ---   |     ---     |   ---   |
     `client_access_token`|Your Dialogflow agent's client access token.|*Required*
     `language`|Your Dialogflow agent's 2-letter ISO 639-1 language code.|*Required*

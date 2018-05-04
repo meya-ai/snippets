@@ -1,5 +1,5 @@
 triggers:
   - type: meya.start_chat
     settings:
-        current_page_url: pricing
-        use_relative_path: true
+        current_page_url: <PAGE_URL>
+        use_relative_path: <TRUE_OR_FALSE>

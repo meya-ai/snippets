@@ -2,7 +2,7 @@
 docstring: |
     ## meya.greetings.yaml
     A pre-trained English NLU model that can detect different greetings.
-    ### Settings
+    ### Properties
     *None.*
 language: yaml
 tags: []

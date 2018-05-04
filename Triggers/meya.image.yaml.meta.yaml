@@ -2,7 +2,7 @@
 docstring: |
     ## meya.image.yaml
     Triggers when someone enters an image. The image URL becomes available in `flow.value`.
-    ### Settings
+    ### Properties
     *None.*
 language: yaml
 tags: []
