@@ -1,7 +1,7 @@
 ---
 docstring: |
     ## meya.regex.yaml
-    Trigger the flow when the user's text input matches the regular expression. We recommend using <a href="https://pythex.org/" target="_blank">pythex</a> to test your regular expressions.
+    Trigger the flow when the user's text input matches the regular expression. We recommend using pythex.org to test your regular expressions.
     ### Properties
     | Property | Description | Required|
     |    ---   |     ---     |   ---   |
