@@ -1,0 +1,5 @@
+triggers:
+  - type: meya.open_chat
+    settings:
+        current_page_url: pricing
+        use_relative_path: true

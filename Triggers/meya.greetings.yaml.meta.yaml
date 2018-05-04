@@ -1,0 +1,9 @@
+---
+docstring: |
+    ## meya.greetings.yaml
+    A pre-trained English NLU model that can detect different greetings.
+    ### Settings
+    *None.*
+language: yaml
+tags: []
+expanded: false

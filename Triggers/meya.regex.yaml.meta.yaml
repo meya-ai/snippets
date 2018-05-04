@@ -1,7 +1,13 @@
 ---
 docstring: |
     ## meya.regex.yaml
-    *TODO*
+    Trigger the flow when the user's text input matches the regular expression. We recommend using [pythex](https://pythex.org/) to test your regular expressions.
+    ### Properties
+    | Property | Description | Required|
+    |    ---   |     ---     |   ---   |
+    `pattern`|The regex pattern the user's input must match.|*Required*
+    `ignorecase`|If `true`, ignore the case of the message.|*Optional. Default: `true`*
+    `capture_text`|Store the user's entire input, not just the portion that matched the regex pattern. If `true`, the input will be stored in `flow.value`.|*Optional. Default: `true`*
 language: yaml
 tags: []
 expanded: false

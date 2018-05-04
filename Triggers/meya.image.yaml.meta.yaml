@@ -1,0 +1,9 @@
+---
+docstring: |
+    ## meya.image.yaml
+    Triggers when someone enters an image. The image URL becomes available in `flow.value`.
+    ### Settings
+    *None.*
+language: yaml
+tags: []
+expanded: false

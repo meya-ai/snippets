@@ -1,0 +1,9 @@
+---
+docstring: |
+    ## meya.file.yaml
+    Triggers when someone uploads a file.
+    ### Settings
+    *None.*
+language: yaml
+tags: []
+expanded: false

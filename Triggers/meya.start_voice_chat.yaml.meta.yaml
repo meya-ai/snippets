@@ -1,0 +1,9 @@
+---
+docstring: |
+    ## meya.voice_start_chat.yaml
+    Triggers every time a voice chat start without a specific invocation.
+    ### Settings
+    *None.*
+language: yaml
+tags: []
+expanded: false

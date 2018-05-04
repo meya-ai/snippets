@@ -1,7 +1,16 @@
 ---
 docstring: |
     ## meya.keyword.yaml
-    *TODO*
+    Trigger the flow when the user's input exactly matches the keyword.
+
+    This intent can be handy when testing and debugging your bot. For example, you may have hidden flows that print information pertinent only to developers. You can restrict access by using the keyword intent type with a hard to guess keyword, like `t3St1ng`.
+
+    In general, forcing users to guess the exact word or phrase that will trigger their intended flow creates a bad user experience. Use Natural Language Understanding when possible.
+    ### Settings
+    | Setting | Description | Required|
+    |    ---   |     ---     |   ---   |
+    `keyword`|The exact text the user's input must match.|*Required*
+    `ignorecase`|If `true`, ignore the case of the message.|*Optional. Default: `true`*
 language: yaml
 tags: []
 expanded: false

@@ -1,0 +1,13 @@
+---
+docstring: |
+    ## meya.start_chat.yaml
+    Triggers when someone opens the Meya Web chat for the first time. Checks to see if the user has opened the chat before by referencing the specified key. Optionally only fires on a URL specified in the settings.
+    ### Settings
+    | Setting | Description | Required|
+    |   ---   |     ---     |   ---   |
+    `key`|Set a key to isolate start chat events.|*Optional*
+    `current_page_url`|A regex expression the current page URL must match in order to trigger the flow.|*Optional*
+    `use_relative_path`|If `true`, `current_page_url` is given as a relative path from your domain root (e.g. `/index.html`).|*Optional. Default: `true`*
+language: yaml
+tags: []
+expanded: false
