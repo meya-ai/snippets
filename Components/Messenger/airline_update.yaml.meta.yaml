@@ -1,7 +1,26 @@
 ---
 docstring: |
     ## airline_update.yaml
-    *TODO*
+    Send a flight status update card.
+    ### Properties
+    | Property | Description | Required |
+    |  :----:  |    :---:    |  :----:  |
+    `intro_message`|Text displayed to the user before presenting the check-in reminder card.|*Optional*
+    `locale`|Two-letter language region code. Must be a two-letter ISO 639-1 language code and a ISO 3166-1 alpha-2 region code separated by an underscore character. Used to translate field labels (e.g. `en_US`).|*Optional*
+    `pnr_number`|Passenger Name Record number (i.e. booking number)|*Required*
+    `update_flight_info`|A YAML dictionary containing the `flight_number`, `departure_airport`, `arrival_airport`, and `flight_schedule` fields.|
+    `flight_number`|The flight number.|*Required*
+    `departure_airport`|A YAML dictionary containing the `airport_code`, `city`, `terminal`, and `gate` fields.|*Required*
+    `airport_code`|The airport code of the departure airport.|*Required*
+    `city`|The city of departure.|*Required*
+    `terminal`|The terminal of the departing flight.|*Required*
+    `gate`|The gate for the departing flight.|*Required*
+    `arrival_airport`|A YAML dictionary containing the `airport_code` and `city` fields.|*Required*
+    `airport_code`|The airport code of the arrival airport.|*Required*
+    `city`|The arrival city.|*Required*
+    `flight_schedule`|A YAML dictionary containing the `departure_time` and `arrival_time` fields.|*Required*
+    `departure_time`|Departure time in departure airport timezone. Must be in the ISO 8601-based format YYYY-MM-DDThh:mm (e.g. 2015-09-26T10:30).|*Required*
+    `arrival_time`|Arrival time in arrival airport timezone. Must be in the ISO 8601-based format YYYY-MM-DDThh:mm (e.g. 2015-09-26T10:30).|*Optional*
 language: yaml
 tags: []
 expanded: false

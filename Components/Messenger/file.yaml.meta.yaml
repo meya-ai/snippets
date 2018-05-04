@@ -1,7 +1,11 @@
 ---
 docstring: |
     ## file.yaml
-    *TODO*
+    Displays a message with a clickable downloadable file link using the specified URL.
+    ### Properties
+    | Property | Description | Required |
+    |  :----:  |    :---:    |  :----:  |
+    `url`|The URL of the file to display.|*Required*
 language: yaml
 tags: []
 expanded: false

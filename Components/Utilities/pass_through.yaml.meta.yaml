@@ -1,7 +1,9 @@
 ---
 docstring: |
     ## pass_through.yaml
-    *TODO*
+    A simple pass-through component. The component does nothing, returns nothing, and has no properties. Useful for terminating a flow, connecting flow branches, or to be used as a temporary placeholder.
+    ### Properties
+    *None.*
 language: yaml
 tags: []
 expanded: false

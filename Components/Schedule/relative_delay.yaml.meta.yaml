@@ -1,7 +1,14 @@
 ---
 docstring: |
     ## relative_delay.yaml
-    *TODO*
+    Specify a relative delay in seconds. This is useful when displaying multiple messages to the user. Adding a short relative delay prevents the messages from being displayed too quickly.
+    Another use for the `delay` property is to foce state transitions to be asynchronous. If you have a long-running state that you would like to leave running in the background, set it's delay to 200ms or less and it will move to the next state as soon as the next state is ready to render.
+    **`delay` is a state-level property, meaning every state supports the delay property.** State-level properties are defined at the same indentation level as the component (see code example above).
+    ### Properties
+    | Property | Description | Required |
+    |  :----:  |    :---:    |  :----:  |
+    `relative`|The number of seconds to pause before progressing to the next state.|*Required*
+    **Note: Decimal delays are supported (e.g. `0.5`), however, delays less than 300ms will be difficult to achieve reliably due to server and network latency.**
 language: yaml
 tags: []
 expanded: false
