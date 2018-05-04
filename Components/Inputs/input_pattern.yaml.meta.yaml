@@ -1,7 +1,26 @@
 ---
 docstring: |
     ## input_pattern.yaml
-    *TODO*
+    ### Properties
+    | Property | Description | Required |
+    |  :----:  |    :---:    |  :----:  |
+    `text`|Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.|*Required*
+    `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
+    `pattern`|The regex pattern to match the input to.|*Required*
+    `require_match`|If `false`, the flow will return the `no_match` action, which you can use to transition to another state.|*Optional. Default: `true`*
+    `output`|The key used to store the data for subsequent steps in the flow.|*Optional. Default: `value`*
+    `scope`|Where to store the data. One of `flow`, `user`, or `bot`.|*Optional. Default: `flow`*
+    `error_message`|The message displayed to the user if the pattern is not matched.|*Optional. Default: `Sorry, I don't understand. Try again.`*
+    ### Transitions
+    | Transition | Description | Required |
+    |   :----:   |    :---:    |  :----:  |
+    `next`|If the input matches `pattern` the `next` action is triggered. By default, this will trigger the next state. You can alter this by explicitly setting a transition for the `next` action in the `transitions` section.|*Optional*
+    `no_match`|The state to transition to if `require_match` is `false` and the user inputs something that doesn't match the `pattern`.|*Optional*
+    ### Regex capture groups
+    Capture groups are supported. For example,
+    `pattern: ^(?P<capture_key>[0-9a-f]{32})$`
+    will make `capture_key` available on the specified scope. For example, `{{ flow.capture_key }}`
+    The entire utterance can be accessed by reading the value stored in the `output` property as well.
 language: yaml
 tags: []
 expanded: false

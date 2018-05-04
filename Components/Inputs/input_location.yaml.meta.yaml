@@ -1,7 +1,26 @@
 ---
 docstring: |
     ## input_location.yaml
-    *TODO*
+    Gets and stores the location information about the user. Works with a text-based answer (e.g. `Sunnyvale, CA`) for all integrations, or a location pin in the case of Messenger, Telegram, and Smooch.
+    **Location pins are only supported for Messenger, Telegram, and Smooch.**
+    ### Properties
+    | Property | Description | Required |
+    |  :----:  |    :---:    |  :----:  |
+    `text`|Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.|*Required*
+    `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
+    `output`|The key used to store the file URL for subsequent steps in the flow.|*Optional. Default: `value`*
+    `confidence`|The assumed confidence when matching.|*Optional. Default: 0.95*
+    `error_message`|The message displayed to the user if the input was not a location.|*Optional. Default: `Sorry, I don't understand. Try again.`*
+    ### Location data
+    Location data is always stored on the `user` scope. You can access any location data available using the syntax `user.<key>`.
+    |  Key  | Description |
+    | :---: |    :---:    |
+    `lat`|The latitude of the location.
+    `lng`|The longitude of the location.
+    `timezone`|The timezone of the location.
+    `city`|The city of the location.
+    `state`|The state of the location.
+    `country`|The country of the location.
 language: yaml
 tags: []
 expanded: false

@@ -1,7 +1,24 @@
 ---
 docstring: |
     ## input_date_time.yaml
-    *TODO*
+    ### Properties
+    | Property | Description | Required |
+    |  :----:  |    :---:    |  :----:  |
+    `text`|Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.|*Required*
+    `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
+    `timezone`|The timezone to use for interpreting times. Entered in Olson Database format. If not set, the component will attempt to read the timezone from the datastore.|*Optional. Default: `GMT`*
+    `timezone_scope`|The datastore scope from which to read the timezone.|*Optional. Default: `user`*
+    `require_match`|If `false`, the flow will return the `no_match` action, which you can use to transition to another state.|*Optional. Default: `true`*
+    `output`|The key used to store the data for subsequent steps in the flow.|*Optional. Default: `value`*
+    `scope`|Where to store the data. One of `flow`, `user`, or `bot`.|*Optional. Default: `flow`*
+    `error_message`|The message displayed to the user if the pattern is not matched.|*Optional. Default: `Sorry, I don't understand. Try again.`*
+    ### Transitions
+    | Transition | Description | Required |
+    |   :----:   |    :---:    |  :----:  |
+    `next`|If the input matches `pattern` the `next` action is triggered. By default, this will trigger the next state. You can alter this by explicitly setting a transition for the `next` action in the `transitions` section.|*Optional*
+    `no_match`|The state to transition to if `require_match` is `false` and the user inputs something ambiguous.|*Optional*
+    ### About timezones
+    If you don't specify a timezone and there is no timezone set for the user, Meya assumes GMT. Keep this in mind when using the data at a later date. Meya will do it's best to populate the user's time zone for you. However, we can't guarantee that it's available.
 language: yaml
 tags: []
 expanded: false

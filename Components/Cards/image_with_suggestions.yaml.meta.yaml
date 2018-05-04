@@ -5,6 +5,10 @@ docstring: |
     ### Properties
     | Property | Description | Required |
     |  :----:  |    :---:    |  :----:  |
+    `image_url`|The URL of the image to display.|*Required*
+    `suggestions`|A list of suggested responses.|*At least one is required.*
+    `mode`|Either `quick_reply` or `buttons`.|*Optional. Default: `quick_reply`*
+    `passthru`|Automatically advance without waiting for the user to respond.|*Optional. Default: `false`*
 language: yaml
 tags: []
 expanded: false

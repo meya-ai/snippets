@@ -1,7 +1,10 @@
 ---
 docstring: |
     ## airline_boarding_pass.yaml
-    *TODO*
+    Send a message that contains boarding passes for one or more flights, or one more passengers. Message bubbles will be grouped by flight information. If the flight information matches, all passengers will  share the same bubble. Multiple bubbles are automatically sent for all `boarding_pass` elements with different `flight_info` values. In the future, Messenger may group all boarding passes into the same bubble.
+    ### Properties
+    | Property | Description | Required |
+    |  :----:  |    :---:    |  :----:  |
 language: yaml
 tags: []
 expanded: false

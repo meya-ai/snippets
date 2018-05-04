@@ -1,7 +1,16 @@
 ---
 docstring: |
     ## input_video.yaml
-    *TODO*
+    Retrieves a URL for an video file uploaded by the user.
+    **Only supported in Messenger, Telegram, Kik, and Twilio.**
+    ### Properties
+    | Property | Description | Required |
+    |  :----:  |    :---:    |  :----:  |
+    `text`|Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.|*Required*
+    `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
+    `output`|The key used to store the video URL for subsequent steps in the flow.|*Optional. Default: `value`*
+    `scope`|Where to store the video URL. One of `flow`, `user`, or `bot`.|*Optional. Default: `flow`*
+    `error_message`|The message displayed to the user if the input was not a video.|*Optional. Default: `Sorry, I don't understand. Try again.`*
 language: yaml
 tags: []
 expanded: false
