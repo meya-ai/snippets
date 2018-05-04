@@ -4,7 +4,7 @@ docstring: |
     Stop an existing scheduled flow by specifying its tag name.
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `tag`|The unique tag of the schedule to stop.|*Required*
 language: yaml
 tags: []

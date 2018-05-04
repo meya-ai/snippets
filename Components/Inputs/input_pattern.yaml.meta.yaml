@@ -3,7 +3,7 @@ docstring: |
     ## input_pattern.yaml
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `text`|Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.|*Required*
     `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
     `pattern`|The regex pattern to match the input to.|*Required*
@@ -13,7 +13,7 @@ docstring: |
     `error_message`|The message displayed to the user if the pattern is not matched.|*Optional. Default: `Sorry, I don't understand. Try again.`*
     ### Transitions
     | Transition | Description | Required |
-    |   :----:   |    :---:    |  :----:  |
+    |    ----    |     ---     |   ----   |
     `next`|If the input matches `pattern` the `next` action is triggered. By default, this will trigger the next state. You can alter this by explicitly setting a transition for the `next` action in the `transitions` section.|*Optional*
     `no_match`|The state to transition to if `require_match` is `false` and the user inputs something that doesn't match the `pattern`.|*Optional*
     ### Regex capture groups

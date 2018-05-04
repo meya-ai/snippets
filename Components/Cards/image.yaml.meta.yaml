@@ -4,7 +4,7 @@ docstring: |
     Outputs an image specified by the image url. Renders on each integration as an image.
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `image_url`|The URL of the image to display.|*Required*
 language: yaml
 tags: []

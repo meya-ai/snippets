@@ -4,7 +4,7 @@ docstring: |
     Display text to the user.
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `text`|The text to display.|*Required. Facebook Messenger has a limit of 640 characters.*
     `buttons`|An array of buttons.|*At least one button is required.*
     `mode`|Either `quick_reply` or `buttons`.|*Optional. Default: `buttons`*

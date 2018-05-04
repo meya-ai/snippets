@@ -5,7 +5,7 @@ docstring: |
     **`delay` is a state-level property, meaning every state supports the delay property.** State-level properties are defined at the same indentation level as the component (see code example above).
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `absolute`|A Unix timestamp. Wait until this time before progressing to the next state.|*Required*
 language: yaml
 tags: []

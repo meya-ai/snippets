@@ -3,13 +3,13 @@ docstring: |
     ## exists.yaml
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `key`|The key of the data to search for.|*Required*
     `scope`|The scope in which to search for `key`. One of `flow`, `user`, or `bot`.|*Optional. Default: `flow`*
     ### Transitions
     You must also implement a `transitions` section to handle the `exists` and `notexists` actions.
     | Transition | Description | Required |
-    |   :----:   |    :---:    |  :----:  |
+    |    ----    |     ---     |   ----   |
     `exists`|The state to route to if `key` is found in `scope`.|*Required*
     `notexists`|The state to route to if `key` does not exist in `scope`.|*Required*
 language: yaml

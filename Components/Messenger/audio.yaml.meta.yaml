@@ -4,7 +4,7 @@ docstring: |
     Displays an inline audio clip of the audio specified in the URL. Renders as a playable audio clip.
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `url`|The URL of the audio file to play.|*Required*
 language: yaml
 tags: []

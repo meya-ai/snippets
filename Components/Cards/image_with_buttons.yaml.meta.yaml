@@ -4,7 +4,7 @@ docstring: |
     Display text to the user.
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `image_url`|The URL of the image to display.|*Required*
     `buttons`|An array of buttons.|*At least one button is required.*
     `mode`|Either `quick_reply` or `buttons`.|*Optional. Default: `buttons`*

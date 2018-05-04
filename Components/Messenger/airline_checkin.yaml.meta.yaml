@@ -4,7 +4,7 @@ docstring: |
     The airline check-in reminder template allows you to send a structured message that contains a check-in reminder with flight information.
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `intro_message`|Text displayed to the user before presenting the check-in reminder card.|*Optional*
     `locale`|Two-letter language region code. Must be a two-letter ISO 639-1 language code and a ISO 3166-1 alpha-2 region code separated by an underscore character. Used to translate field labels (e.g. `en_US`).|*Optional*
     `pnr_number`|Passenger Name Record number (i.e. booking number)|*Required*

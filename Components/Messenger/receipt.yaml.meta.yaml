@@ -5,7 +5,7 @@ docstring: |
     **Currently only supported by Messenger and Meya Web.**
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `recipient_name`|The name of the purchaser|*Required*
     `order_number`|The order number. Must be unique.|*Required*
     `currency`|The currency in which the purchase was made.|*Required*

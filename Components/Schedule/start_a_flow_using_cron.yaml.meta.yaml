@@ -4,7 +4,7 @@ docstring: |
     Schedule a flow to run either at set intervals or at specific times.
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `flow`|The name of the flow to run.|*Required*
     `action`|Specify an action used to start the flow at a particular state. See [routing](http://docs.meya.ai/docs/flow-routing) for more details.|*Optional.*
     `data`|A YAML dictionary containing data to pass into the specified flow.|*Optional*

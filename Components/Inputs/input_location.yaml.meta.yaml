@@ -5,7 +5,7 @@ docstring: |
     **Location pins are only supported for Messenger, Telegram, and Smooch.**
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `text`|Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.|*Required*
     `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
     `output`|The key used to store the file URL for subsequent steps in the flow.|*Optional. Default: `value`*
@@ -14,7 +14,7 @@ docstring: |
     ### Location data
     Location data is always stored on the `user` scope. You can access any location data available using the syntax `user.<key>`.
     |  Key  | Description |
-    | :---: |    :---:    |
+    |  ---  |     ---     |
     `lat`|The latitude of the location.
     `lng`|The longitude of the location.
     `timezone`|The timezone of the location.

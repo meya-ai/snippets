@@ -4,7 +4,7 @@ docstring: |
     Send a message that contains boarding passes for one or more flights, or one more passengers. Message bubbles will be grouped by flight information. If the flight information matches, all passengers will  share the same bubble. Multiple bubbles are automatically sent for all `boarding_pass` elements with different `flight_info` values. In the future, Messenger may group all boarding passes into the same bubble.
     ### Properties
     | Property | Description | Required |
-    |  :----:  |    :---:    |  :----:  |
+    |   ----   |     ---     |   ----   |
     `intro_message`|Text displayed to the user before presenting the boarding pass card.|*Optional*
     `locale`|Two-letter language region code. Must be a two-letter ISO 639-1 language code and a ISO 3166-1 alpha-2 region code separated by an underscore character. Used to translate field labels (e.g. `en_US`).|*Optional*
     `boarding_pass`|A YAML list of boarding passes. Each boarding pass contains the following fields.|*Required*
