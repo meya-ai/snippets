@@ -1,0 +1,11 @@
+---
+docstring: |
+    ## meya.catchall.yaml
+    Will trigger whenever a user says something that hasn't matched to any  other triggers you've specified. A flow launched by the `catchall` trigger can be used to activate a fall back conversation flow.
+
+    Tip: Combine a `catchall` trigger with the `human.transfer` component to have the bot transfer to a human agent when it can't understand the user.
+    ### Properties
+    *None.*
+language: yaml
+tags: []
+expanded: false

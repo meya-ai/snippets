@@ -1,0 +1,6 @@
+triggers:
+  - type: meya.wit
+    settings:
+        client_access_token: <YOUR_TOKEN>
+        intent: <INTENT_NAME>
+        min_confidence: <CONFIDENCE_VALUE>

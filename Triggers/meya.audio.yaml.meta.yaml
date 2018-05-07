@@ -1,0 +1,9 @@
+---
+docstring: |
+    ## meya.audio.yaml
+    Triggers when someone uploads an audio file.
+    ### Properties
+    *None.*
+language: yaml
+tags: []
+expanded: false

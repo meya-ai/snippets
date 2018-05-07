@@ -1,7 +1,48 @@
 ---
 docstring: |
     ## meya.regex.yaml
-    *TODO*
+    Trigger the flow when the user's text input matches the regular expression. We recommend using pythex.org to test your regular expressions.
+    ### Properties
+    | Property | Description | Required|
+    |    ---   |     ---     |   ---   |
+    `pattern`|The regex pattern the user's input must match.|*Required*
+    `ignorecase`|If `true`, ignore the case of the message.|*Optional. Default: `true`*
+    `capture_text`|Store the user's entire input, not just the portion that matched the regex pattern. If `true`, the input will be stored in `flow.value`.|*Optional. Default: `true`*
+    ### Example 1
+    Say your support ticket IDs follow the format <AA0000> and you want to trigger a flow when the user enters a ticket ID. The user may enter the ticket ID as part of a longer sentence. The following trigger will capture the user's ticket ID regardless of where it appears in the input. The `meya.text` component in the `say_ticket_num` state confirms that the regex pattern worked as expected.
+    ```yaml
+    triggers:
+    - type: meya.regex
+      settings:
+          pattern: "^.*(?P<ticket_num>\b[A-Z]{2}[[0-9]{4}\b).*$"
+          ignorecase: false
+    states:
+      say_ticket_num:
+        component: meya.text
+        properties:
+          text: "Thanks! I'm looking up ticket #{{ flow.ticket_num }}."
+    ```
+    Test it out with these sentences:
+    1. `Hi, can I get an update on my support ticket #AJ5633, please?`
+    2. `Update on QF7150`
+    3. `GR9900`
+    ### Example 2
+    Say your users can subscribe to an email list by entering their email address. The address may be embedded in a longer sentence. The following trigger will capture the user's email address regardless of where it appears in the input. The `meya.text` component in the `say_email_address` state confirms that the regex pattern worked as expected.
+    ```yaml
+    triggers:
+    - type: meya.regex
+      settings:
+          pattern: "^.*(?P<email>\b[\w]+@[\w]+.[\w]+\b).*$"
+    states:
+      say_ticket_num:
+        component: meya.text
+        properties:
+          text: "Thanks! I'll send interesting stories to {{ flow.email }}"
+    ```
+    Test it out with these sentences:
+    1. `My email address is name@example.com.`
+    2. `name@example.com`
+    3. `Subscribe name@example.com to your email list.`
 language: yaml
 tags: []
 expanded: false

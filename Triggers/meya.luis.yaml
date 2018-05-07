@@ -1,0 +1,7 @@
+triggers:
+  - type: meya.luis
+    settings:
+        app_id: <YOUR_APP_ID>
+        api_key: <YOUR_API_KEY>
+        intent: <INTENT_NAME>
+        min_confidence: <CONFIDENCE_VALUE>

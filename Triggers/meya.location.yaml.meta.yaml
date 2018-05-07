@@ -1,0 +1,9 @@
+---
+docstring: |
+    ## meya.location.yaml
+    Triggers when someone enters their location.
+    ### Properties
+    *None.*
+language: yaml
+tags: []
+expanded: false

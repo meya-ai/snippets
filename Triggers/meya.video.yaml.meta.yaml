@@ -1,0 +1,9 @@
+---
+docstring: |
+    ## meya.video.yaml
+    Triggers when someone enters a video.
+    ### Properties
+    *None.*
+language: yaml
+tags: []
+expanded: false
