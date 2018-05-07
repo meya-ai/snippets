@@ -1,5 +1,5 @@
 triggers:
   - type: meya.keyword
-    settings:
+    properties:
         ignorecase: <TRUE_OR_FALSE>
         keyword: <KEYWORD_GOES_HERE>

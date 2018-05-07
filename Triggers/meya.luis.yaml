@@ -1,6 +1,6 @@
 triggers:
   - type: meya.luis
-    settings:
+    properties:
         app_id: <YOUR_APP_ID>
         api_key: <YOUR_API_KEY>
         intent: <INTENT_NAME>
