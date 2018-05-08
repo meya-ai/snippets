@@ -15,7 +15,6 @@ docstring: |
 
     class LogComponent(Component):
         def start(self):
-            text = "Hello, world!"
             status = "error"
             context = {
                 "order": "chicken shawarma",
@@ -25,10 +24,8 @@ docstring: |
                     ]
             }
             self.log(context, type="food", status=status)
-            print text
-            message = self.create_message(text=text)
-            return self.respond(message=message, action="next")
-        ```
+            return self.respond(action="next")
+    ```
 language: yaml
 tags: []
 expanded: false
