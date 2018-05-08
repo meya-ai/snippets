@@ -24,7 +24,7 @@ docstring: |
     `source`|The source Dialogflow agent.
 
     Matched entities will be available on `flow` scope using the entity name and also as a list by appending `_list`. For example the uttrance, "I love apples, pears and bananas." would result in the following `flow` scope data.
-        ```python
+        ```
         {
             "intent": "fruits"
             "fruit": "apples",
