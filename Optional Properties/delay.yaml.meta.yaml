@@ -2,7 +2,9 @@
 docstring: |
     ## delay
     Specify a relative delay in seconds, or in absolute terms as a Unix timestamp. 
+    
     Relative delays are useful when displaying multiple messages to the user. Adding a short relative delay prevents the messages from being displayed too quickly.
+    
     Another use for the `delay` property is to foce state transitions to be asynchronous. If you have a long-running state that you would like to leave running in the background, set it's relative delay to 200ms or less and it will move to the next state as soon as the next state is ready to render.
     **`delay` is a state-level property, meaning every state supports the delay property.** State-level properties are defined at the same indentation level as the component (see code example above).
     ### Properties
@@ -10,6 +12,7 @@ docstring: |
     |   ----   |     ---     |   ----   |
     `relative`|The number of seconds to pause before progressing to the next state.|*Required if setting a relative delay, otherwise omit.*
     `absolute`|A Unix timestamp. Wait until this time before progressing to the next state.|*Required if setting an absolute delay, otherwise omit.*
+    
     **Note: Decimal delays are supported (e.g. `0.5`), however, delays less than 300ms will be difficult to achieve reliably due to server and network latency.**
     ### Example using `relative`
     This example uses the `meya.pass` component, but `delay` works with any component.

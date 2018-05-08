@@ -12,35 +12,6 @@ docstring: |
     `block`|Treat any non-button press as user input. This will trigger the `no_match` action, so you must add a transition for `no_match` as you would with an input.|*Optional. Default: `false`*
     `output`|The key used to store the data for subsequent steps in the flow.|*Optional. Default: `value`*
     `scope`|Where to store the data. One of `flow`, `user`, or `bot`.|*Optional. Default: `flow`*
-    ### Example
-    This example shows the use of transition buttons.
-    ```
-    name: button_transition
-    states:
-        text_buttons_state:
-            component: meya.text_buttons
-            properties:
-                text: Pick your favorite football player
-                output: player
-                buttons:
-                    - text: Lionel Messi
-                      action: messi
-                    - text: Cristiano Ronaldo
-                      action: ronaldo
-            transitions:
-                messi: messi_state
-                ronaldo: ronaldo_state
-        messi_state:
-            component: meya.image
-            properties:
-                image_url: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Lionel_Messi.png'
-            return: true
-        ronaldo_state:
-            component: meya.image
-            properties:
-                image_url: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Cristiano_Ronaldo_20120609.jpg'
-            return: true
-    ```
 language: yaml
 tags: []
 expanded: false
