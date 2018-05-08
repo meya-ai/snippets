@@ -4,6 +4,19 @@ docstring: |
     Triggers when someone enters their location.
     ### Properties
     *None.*
+    ### Flow scope variables
+    The `meya.location` trigger sets several variables on the `flow` scope. They can be accessed from a flow using Mustache syntax: `{{ flow.city }}`, or from a Python component using `self.db.flow.get("city")`.
+
+    | Variable | Description |
+    |   ---    |     ---     |
+    `city`|The location's city.
+    `state`|The location's state.
+    `country`|The location's country.
+    `postal_code`|The location's postal code.
+    `timezone`|The location's timezone.
+    `lng`|The location's longitude.
+    `lat`|The location's latitude.
+    `_confidence`|The bot's confidence that this trigger is the best match given the user's input.
 language: yaml
 tags: []
 expanded: false

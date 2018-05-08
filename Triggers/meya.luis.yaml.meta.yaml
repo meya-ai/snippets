@@ -12,8 +12,9 @@ docstring: |
     `min_confidence`|The minimum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `0.67`*
     `max_confidence`|The maximum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `1.0`*
     `subdomain`|The Luis.ai subdomain to use.|*Optional. Default: `westus`*
-    ### NLU data returned from Luis.ai
-    The following data are available on the `flow` scope.
+    ### Flow scope variables
+    The following data are available on the `flow` scope. They can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
+
     | Property | Description |
     |    ---   |     ---     |
     `_confidence`|The Luis.ai agent's confidence of the match.

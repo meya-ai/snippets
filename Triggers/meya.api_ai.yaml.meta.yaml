@@ -11,8 +11,9 @@ docstring: |
     `intent_regex`|A regular expression to use to match the incoming intent. Used for advanced intent matching. If set, this overrides the `intent` field.|*Optional*
     `min_confidence`|The minimum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `0.67`*
     `max_confidence`|The maximum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `1.0`*
-    ### NLU data returned from Dialogflow
-    The following data are available on the `flow` scope.
+    ### Flow scope variables
+    The following data are available on the `flow` scope. They can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
+
     | Property | Description |
     |    ---   |     ---     |
     `_confidence`|The Dialogflow agent's confidence of the match.

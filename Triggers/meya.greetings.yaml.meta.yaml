@@ -4,6 +4,16 @@ docstring: |
     A pre-trained English NLU model that can detect different greetings.
     ### Properties
     *None.*
+    ### Flow scope variables
+    The `meya.greetings` trigger sets several variables on the `flow` scope. They can be accessed from a flow using Mustache syntax: `{{ flow._intent }}`, or from a Python component using `self.db.flow.get("_intent")`.
+
+    | Variable | Description |
+    |   ---    |     ---     |
+    `_intent`|This will always be `hi`.
+    `intent`|Same as `_intent`. This will always be `hi`.
+    `value`|The user's original input.
+    `intent_list|Similar to `_intent`, this will always be `['hi']`
+    `_confidence`|The bot's confidence that this trigger is the best match given the user's input.
 language: yaml
 tags: []
 expanded: false
