@@ -1,0 +1,23 @@
+    receipt_state:
+        component: meya.receipt
+        properties:
+            recipient_name: <RECEPIENT_NAME>
+            merchant_name: <MERCHANT_NAME>
+            order_number: <ORDER_NUMBER>
+            currency: <CURRENCY> # e.g. USD
+            payment_method: <PAYMENT_METHOD>
+            elements:
+                - title: <TITLE_1>
+                  price: 0
+                  image_url: "http://pipsum.com/60x60.jpg"
+                - title: <TITLE_N>
+                  price: 0
+                  image_url: "http://pipsum.com/60x60.jpg"
+            summary:
+                total_cost: 0
+            address:
+                street_1: <STREET_1>
+                city: <CITY>
+                state: <STATE>
+                country: <COUNTRY>
+                postal_code: <POSTAL_CODE>

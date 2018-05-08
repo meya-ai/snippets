@@ -1,0 +1,14 @@
+---
+docstring: |
+    ## meya.image_buttons
+    Outputs an image and one or more buttons. Renders on each integration differently, depending on the specifications of the integration.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `image_url`|The URL of the image to display.|*Required*
+    `buttons`|An array of buttons.|*At least one button is required.*
+    `mode`|Either `quick_reply` or `buttons`.|*Optional. Default: `buttons`*
+    `passthru`|Automatically advance without waiting on the user.|*Optional. Default: `false`*
+language: yaml
+tags: []
+expanded: false

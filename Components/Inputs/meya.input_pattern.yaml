@@ -1,0 +1,8 @@
+    input_pattern_state:
+        component: meya.input_pattern
+        properties:
+            text: "Your question here"
+            pattern: <REGEX_PATTERN> # e.g. "^.*$"
+            output: <YOUR_KEY>
+            scope: <SCOPE> # e.g. flow|user|bot
+            require_match: <BOOLEAN>

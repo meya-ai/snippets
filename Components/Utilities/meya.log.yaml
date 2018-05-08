@@ -1,0 +1,6 @@
+    start:
+        component: meya.log
+        properties:
+            context: <MY_VALUE>
+            type: <TYPE>
+            status: <STATUS>  # info|warning|error

@@ -1,0 +1,4 @@
+        log:
+            status: <STATUS> # info|warning|error
+            type: <TYPE> # A string with no spaces
+            context: <CONTEXT>

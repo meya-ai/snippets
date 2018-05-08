@@ -1,0 +1,46 @@
+---
+docstring: |
+    ## meya.schedule
+    Schedule a flow to run either at set periodic intervals, or at specific times using cron.
+    ### Properties
+    These properties are common to both periodic and cron versions of `meya.schedule`.
+    
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `flow`|The name of the flow to run.|*Required*
+    `action`|Specify an action used to start the flow at a particular state. See [routing](http://docs.meya.ai/docs/flow-routing) for more details.|*Optional.*
+    `data`|A YAML dictionary containing data to pass into the specified flow.|*Optional*
+    `tag`|A unique ID for this schedule. It is necessary in order to programmatically stop schedules. If you don't set this, you will need to stop the scheduled flow manually from the **Schedules** tab from the bot's dashboard.|*Optional*
+    `max_count`|The maximum number of times this schedule will run.|*Optional*
+
+    #### Periodic
+    These properties are only set when using the periodic version of `meya.schedule`.
+
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `interval`|How often to run the scheduled flow.|*Optional. Default: `1`*
+    `period`|The units for `interval`. One of `seconds`, `minutes`, `hours`, `weeks`, `months`, or `years`.|*Required*
+    `base`|The time of the first run.|*Optional. Default: `now`*
+
+    #### cron
+    These properties are only set when using the cron version of `meya.schedule`.
+    
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `cron`|A [cron expression](https://en.wikipedia.org/wiki/Cron): `"* * * * *"`|*Required*
+    `timezone`|The timezone to use for the cron job.|*Optional. Default: `UTC`*
+    `timezone_scope`|Use this if your datastore already contains the timezone you want to use to run the cron job.|*Optional. Ignored if `timezone` is set.*
+    ### Example using cron
+    This state schedules a flow, `my_flow`, to run every Saturday night at 23:45 UTC.
+    ```
+    start_cron_schedule:
+        flow: meya.schedule
+        data:
+            tag: my_tag
+            flow: my_flow
+            cron: "45 23 * * 6"
+            timezone: UTC
+    ```
+language: yaml
+tags: []
+expanded: false

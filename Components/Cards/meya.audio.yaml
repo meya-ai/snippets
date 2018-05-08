@@ -1,0 +1,4 @@
+    audio_attachment_state:
+        component: meya.audio
+        properties:
+            url: <AUDIO_FILE_URL>

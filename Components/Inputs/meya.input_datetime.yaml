@@ -1,0 +1,9 @@
+    input_datetime_state:
+        component: meya.input_datetime
+        properties:
+            text: "Your question here"
+            output: <YOUR_KEY>
+            scope: <SCOPE> # e.g. flow|user|bot
+            timezone: <TIMEZONE> # e.g. UTC
+            timezone_scope: <SCOPE> # e.g. flow|user|bot
+            require_match: <BOOLEAN>

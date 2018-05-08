@@ -1,0 +1,19 @@
+---
+docstring: |
+    ## meya.conditional_equal
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `value1`|The first value to compare. You can use Mustache syntax.|*Required*
+    `value2`|The second value to compare. You can use Mustache syntax.|*Required*
+    ### Transitions
+    You must also implement a `transitions` section to handle the `equal` and `notequal` actions.
+    
+    | Transition | Description | Required |
+    |    ----    |     ---     |   ----   |
+    `equal`|The state to route to if `value1` and `value2` are equal.|*Required*
+    `notequal`|The state to route to if `value1` and `value2` are not equal.|*Required*
+
+language: yaml
+tags: []
+expanded: false

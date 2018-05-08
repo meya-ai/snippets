@@ -1,0 +1,16 @@
+---
+docstring: |
+    ## meya.input_string
+    Display text to the user and wait for a response.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `text`|Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.|*Optional*
+    `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
+    `output`|The key used to store the data for subsequent steps in the flow.|*Optional. Default: `value`*
+    `scope`|Where to store the data. One of `flow`, `user`, or `bot`.|*Optional. Default: `flow`*
+    ### Transitions
+    When the user submits their response, the `next` action is triggered. By default, this will trigger the next state. You can alter this by explicitly setting a transition for the `next` action in the `transitions` section.
+language: yaml
+tags: []
+expanded: false

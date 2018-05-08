@@ -1,7 +1,33 @@
 ---
 docstring: |
-    ## custom.component.yaml
-    *TODO*
+    ## custom.component
+    In addition to the built-in components, you can build a custom component using Python. This allows your bot to interact with APIs and other business systems.
+    ### Properties
+    You may pass data into the component by defining custom variables in the `properties` field. Within the custom component these variables can be accessed using:
+    `self.properties.get("my_property_name")`
+    ### Example
+    Here is an example custom component. The flow state uses the component and passes two arguments to the component.
+    ```
+    custom_state:
+      component: my_component_name
+      properties:
+        num: 1
+        name: "Meya"
+    ```
+    ```
+    # -*- coding: utf-8 -*-
+    from meya import Component
+
+
+    class MyComponent(Component):
+
+        def start(self):
+            num = self.properties.get("num")
+            name = self.properties.get("name")
+            text = "Hello, {}! You're #{}".format(name, num)
+            message = self.create_message(text=text)
+            return self.respond(message=message, action="next")
+    ```
 language: yaml
 tags: []
 expanded: false

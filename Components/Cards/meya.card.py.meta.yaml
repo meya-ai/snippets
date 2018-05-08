@@ -1,0 +1,21 @@
+---
+docstring: |
+    ## meya.card
+    A comprehensive card that contains a mix of text and images. Renders on each integration differently, depending on the specifications of the integration (e.g. on Messenger suggestions are buttons, on Kik they are keyboard suggested responses).
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `title`|The title of the card.|*Required*
+    `text`|The text displayed to the user.|*In Messenger this is the subtitle (limit 80 characters)*
+    `image_url`|The URL of the image to display.|*Optional*
+    `image_aspect_ratio`|Aspect ratio used to render the image from the image_url. Must be `horizontal` or `square`.|*Optional. Default: `horizontal`*
+    `suggestions`|A YAML list of suggested responses.|*Optional. You must use either suggestions OR buttons.*
+    `buttons`|An array of buttons.|*Optional. You must use either suggestions or buttons.*
+    `passthru`|Automatically advance without waiting for the user's input.|*Optional. Default: `false`*
+    `block`|Treat any non-button press as user input. This will trigger the `no_match` action, so you must add a transition for `no_match` as you would with an input.|*Optional. Default: `false`*
+    `output`|The key used to store the data for subsequent steps in the flow.|*Optional. Default: `value`*
+    `scope`|Where to store the data. One of `flow`, `user`, or `bot`.|*Optional. Default: `flow`*
+    `item_url`|A web URL that is invoked when the user clicks on the card.|*Optional. **Deprecated** Only supported by Facebook Messenger.*
+language: yaml
+tags: []
+expanded: false

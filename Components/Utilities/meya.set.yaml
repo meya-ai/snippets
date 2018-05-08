@@ -1,0 +1,6 @@
+    set_state:
+        component: meya.set
+        properties:
+            key: <YOUR_KEY>
+            value: <YOUR_VALUE>
+            scope: <SCOPE> # flow|user|bot

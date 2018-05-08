@@ -1,0 +1,16 @@
+---
+docstring: |
+    ## meya.cards
+    Display multiple cards to the user.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `elements`|An array of cards.|*Required*
+    `image_aspect_ratio`|The aspect ratio used to render all the images of the lements. Must be either `horizontal` or `square`.|*Optional. Default: `false`*
+    `passthru`|Automatically advance without waiting for the user's input.|*Optional. Default: `false`*
+    `block`|Treat any non-button press as user input. This will trigger the `no_match` action, so you must add a transition for `no_match` as you would with an input.|*Optional. Default: `false`*
+    `output`|The key used to store the data for subsequent steps in the flow.|*Optional. Default: `value`*
+    `scope`|Where to store the data. One of `flow`, `user`, or `bot`.|*Optional. Default: `flow`*
+language: yaml
+tags: []
+expanded: false

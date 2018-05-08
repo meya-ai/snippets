@@ -1,0 +1,6 @@
+    input_location_state:
+        component: meya.input_location
+        properties:
+            text: "Your question here"
+            output: <YOUR_KEY>
+            scope: <SCOPE> # e.g. flow|user|bot

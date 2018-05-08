@@ -1,0 +1,18 @@
+---
+docstring: |
+    ## meya.list
+    A list card allows you to render a list of items vertically. It can be rendered in 2 different ways, either with each item presented the same way or a cover image with the first item.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `elements`|A YAML list of items to display in the list card. The list must include 2-4 items. Each item contains a `title`, `subtitle`, `image_url`, `default_action`, and `buttons` field.|*Required*
+    `title`|The title of the item. There is an 80 character limit.|*Required*
+    `subtitle`|The subtitle of the item. There is an 80 character limit.|*Optional*
+    `image_url`|The URL to the item's image.|*Required for the first element if `top_element_style` is set to `large`*
+    `default_action`|A [link button](http://docs.meya.ai/docs/buttons#section-link-button). Triggered when the user taps the item.|*Optional*
+    `buttons`|A YAML list containing one button that will be displayed on the item.|*Required*
+    `top_element_style`|Defines the appearance of the first item in the list. Can be `compact` or `large`. If set to `compact`, the first item will look the same as the rest of the items. If set to `large`, the first item will appear as a cover item.|*Optional. Default: `large`*
+    `buttons`|A YAML list containing one button that will appear at the bottom of the card. This is a card-level button, not item-level.|*Required*
+language: yaml
+tags: []
+expanded: false

@@ -1,0 +1,36 @@
+---
+docstring: |
+    ## meya.wit
+    Accepts input from the user and matches it against a pre-trained Wit.ai app. It also extracts entity data and makes that available on `flow` scope.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `text`|Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.|*Required*
+    `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
+    `token`|The Wit.ai token from your Wit.ai app settings.|*Required*
+    `require_match`|If `false`, the flow will return the `no_match` action, which you can use to transition to another state.|*Optional. Default: `true`*
+    `min_confidence`|The minimum confidence required to match the entity.|*Optional. Default: `0.67`*
+    `latch_up`|If `true`, any confidence value greater than `min_confidence` will be rounded up to `1.0`, thus winning any intent collisions.` Confidence values less than `min_confidence` will be rounded down to `0.0`.|`Optional. Default: `false`*
+    `scope`|Where to store the data. One of `flow`, `user`, or `bot`.|*Optional. Default: `flow`*
+    `buttons`|A YAML list of buttons.|*Optional*
+    **The user's intent will be available as `flow.intent`.**
+    ### Transitions
+    | Transition | Description | Required |
+    |    ----    |     ---     |   ----   |
+    `next`|If the input matches the Wit.ai app's intent the `next` action is triggered. By default, this will trigger the next state. You can alter this by explicitly setting a transition for the `next` action in the `transitions` section.|*Optional*
+    `no_match`|The state to transition to if `require_match` is `false` and the user's input does not match any of the Wit.ai app's intents.|*Optional*
+    **You must explicitly handle intents returned from Wit.ai, or your bot will not respond. For example, if the user's input matches a wit.ai intent called `weather`, you must have a matching transition called `weather`.**
+    ### Flow scope variables
+    Wit.ai will set several variables on the `flow` scope related to the NLU intent matching process. They can be accessed from a flow using Mustache syntax: `{{ flow._intent }}`, or from a Python component using `self.db.flow.get("_intent")`.
+    
+    | Variable | Description |
+    |   ---    |     ---     |
+    `_confidence`|The Wit.ai app's confidence in the match.
+    `_intent`|The intent the Wit.ai app matched.
+    `value`|The user's original text.
+    `fulfillment.speech`|The Wit.ai app's response, if you've provided the app with responses.
+    `parameters.simplified`|The query submitted to Wit.ai.
+    `source`|The source Wit.ai app.
+language: yaml
+tags: []
+expanded: false

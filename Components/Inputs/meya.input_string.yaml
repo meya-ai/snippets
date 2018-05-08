@@ -1,0 +1,6 @@
+    input_state:
+        component: meya.input_string
+        properties:
+            text: "Your question here"
+            output: <YOUR_KEY>
+            scope: <SCOPE> # e.g. flow|user|bot

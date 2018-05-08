@@ -1,6 +1,0 @@
-    set_state:
-        component: meya.set
-        properties:
-            key: your_key
-            value: your_value
-            scope: flow

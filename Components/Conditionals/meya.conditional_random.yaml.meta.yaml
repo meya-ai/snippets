@@ -1,0 +1,12 @@
+---
+docstring: |
+    ## meya.conditional_random
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `choices`|A YAML list of options to randomly select from.|*Required*
+    ### Transitions
+    For each option defined in `choices` you must implement a corresponding transition.
+language: yaml
+tags: []
+expanded: false

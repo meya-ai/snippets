@@ -1,0 +1,7 @@
+    input_integer_state:
+        component: meya.input_integer
+        properties:
+            text: "Your question here"
+            output: <YOUR_KEY>
+            scope: <SCOPE> # e.g. flow|user|bot
+            require_match: <BOOLEAN>

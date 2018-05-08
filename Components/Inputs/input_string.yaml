@@ -1,6 +1,0 @@
-    input_state:
-        component: meya.input_string
-        properties:
-            text: Your question here
-            output: your_key
-            scope: flow
