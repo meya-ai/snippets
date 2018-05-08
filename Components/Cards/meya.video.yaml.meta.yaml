@@ -1,0 +1,11 @@
+---
+docstring: |
+    ## meya.video
+    Outputs an inline video of the video specified in the URL. Renders as a playable video.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `url`|The URL of the video file to play.|*Required*
+language: yaml
+tags: []
+expanded: false
