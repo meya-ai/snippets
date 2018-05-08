@@ -1,7 +1,7 @@
 ---
 docstring: |
     ## custom.component
-    In addition to 
+    In addition to the built-in components, you can build a custom component using Python. This allows your bot to interact with APIs and other business systems.
     ### Properties
     You may pass data into the component by defining custom variables in the `properties` field. Within the custom component these variables can be accessed using:
     `self.properties.get("my_property_name")`
