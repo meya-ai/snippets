@@ -1,6 +1,6 @@
 triggers:
   - type: meya.regex
     properties:
-        ignorecase: <TRUE_OR_FALSE>
+        ignorecase: <BOOLEAN>
         pattern: <REGEX_GOES_HERE>
-        capture_text: <TRUE_OR_FALSE>
+        capture_text: <BOOLEAN>
