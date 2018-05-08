@@ -13,6 +13,7 @@ docstring: |
     `error_message`|The message displayed to the user if the input was not a location.|*Optional. Default: `Sorry, I don't understand. Try again.`*
     ### Location data
     Location data is always stored on the `user` scope. You can access any location data available using the syntax `user.<key>`.
+    
     |  Key  | Description |
     |  ---  |     ---     |
     `lat`|The latitude of the location.

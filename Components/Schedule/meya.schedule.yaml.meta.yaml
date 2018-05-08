@@ -14,6 +14,7 @@ docstring: |
 
     #### Periodic
     These properties are only set when using the periodic version of `meya.schedule`.
+
     | Property | Description | Required |
     |   ----   |     ---     |   ----   |
     `interval`|How often to run the scheduled flow.|*Optional. Default: `1`*
@@ -22,6 +23,7 @@ docstring: |
 
     #### cron
     These properties are only set when using the cron version of `meya.schedule`.
+    
     | Property | Description | Required |
     |   ----   |     ---     |   ----   |
     `cron`|A [cron expression](https://en.wikipedia.org/wiki/Cron): `"* * * * *"`|*Required*
