@@ -1,0 +1,18 @@
+    equal_check_state:
+        component: meya.conditional_equal
+        properties:
+            value1: <TEST_VALUE> # e.g. "{{ flow.your_key }}"
+            value2: <TEST_VALUE> # e.g. 1
+        transitions:
+            equal: equal_state
+            notequal: notequal_state
+    equal_state:
+        component: meya.text
+        properties:
+            text: "Equal"
+        return: true
+    notequal_state:
+        component: meya.text
+        properties:
+            text: "Not equal"
+        return: true

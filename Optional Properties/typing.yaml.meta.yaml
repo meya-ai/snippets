@@ -1,0 +1,37 @@
+---
+docstring: |
+    ## typing
+    The Meya bot engine automatically emits typing events to supported chat apps. These are useful to indicate to the user that your bot is thinking (ie. processing). The user will know not to type during this time, and that a bot response is on its way.
+    For more information on how typing indicators work, see https://docs.meya.ai/docs/typing-indicators.
+    **`typing` is a state-level property, meaning every state supports the typing property.** State-level properties are defined at the same indentation level as the component (see code example above).
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `typing`|One of `on`, `off`, `keep_on`, or `no_change`.|**Optional**
+
+    Built-in components that display something to the user have `typing` set to `on`, by default.
+    Built-in component that do not display something to the user have `typing` set to `no_change`, by default.
+    `keep_on` keeps the typing indicator on until explicitly turned off by `typing: off`, or until the messaging app turns off.
+    `off` forces the typing indicator to turn off if it was already on, or would normally be turned on by the component.
+    ### Example
+    ```
+    text:
+        component: meya.text
+        properties:
+            text: "Typing on ⏲"
+    first:
+        component: process
+        typing: "keep_on"
+    second:
+        component: process
+        typing: "no_change"
+    third:
+        component: meya.pass
+    last:
+        component: meya.text
+        properties:
+            text: "Done! 💯"
+    ```
+language: yaml
+tags: []
+expanded: false

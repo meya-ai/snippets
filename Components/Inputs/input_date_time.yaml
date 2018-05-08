@@ -1,9 +1,0 @@
-    input_datetime_state:
-        component: meya.input_datetime
-        properties:
-            text: Your question here
-            output: your_key
-            scope: flow
-            timezone: GMT
-            timezone_scope: user
-            require_match: true

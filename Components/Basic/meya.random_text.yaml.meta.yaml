@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.random_text.yaml
+    ## meya.random_text
     Randomly select one text option to display to the user.
     ### Properties
     | Property | Description | Required |

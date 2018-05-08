@@ -1,0 +1,5 @@
+    unset_state:
+        component: meya.unset
+        properties:
+            key: <YOUR_KEY>
+            scope: <SCOPE> # flow|user|bot

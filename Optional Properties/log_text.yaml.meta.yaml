@@ -1,0 +1,21 @@
+---
+docstring: |
+    ## log_text
+    Write a custom log message from any state. The message will appear in the **Logs** panel.
+    This is a simplified version of the state-level `log` property. `status` and `type` are automatically set to `info` and `misc`, respectively.
+    **`log_text` is a state-level property, meaning every state supports the log_text property.** State-level properties are defined at the same indentation level as the component (see code example above).
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `log_text`|The actual message to log. Can be a string, dictionary, list, set, integer, or float. Can include Mustache syntax.|**Optional**
+    ### Example
+    ```
+    log_state:
+        component: meya.text
+        properties:
+            text: "text"
+        log_text: "my log message"
+    ```
+language: yaml
+tags: []
+expanded: false

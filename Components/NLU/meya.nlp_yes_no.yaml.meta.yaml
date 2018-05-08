@@ -1,0 +1,21 @@
+---
+docstring: |
+    ## meya.nlp_yes_no
+    Accepts input from the user and matches it against a pre-trained English yes/no model.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `text`|Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.|*Required*
+    `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
+    `require_match`|If `false`, the flow will return the `no_match` action, which you can use to transition to another state.|*Optional. Default: `true`*
+    ### Transitions
+    | Transition | Description | Required |
+    |    ----    |     ---     |   ----   |
+    `"yes"`|The state to transition to if the user inputs something like "yes".|
+    `"no"`|The state to transition to if the user inputs something like "no".|
+    `next`|If the input matches the Luis.ai app's intent the `next` action is triggered. By default, this will trigger the next state. You can alter this by explicitly setting a transition for the `next` action in the `transitions` section.|*Optional*
+    `no_match`|The state to transition to if `require_match` is `false` and the user's input does not match any of the Luis.ai app's intents.|*Optional*
+    **Note: `yes` and `no` are reserved words in YAML, so you must escape them with single or double quotes.**
+language: yaml
+tags: []
+expanded: false

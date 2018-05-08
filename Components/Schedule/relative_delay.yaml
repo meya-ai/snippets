@@ -1,4 +1,0 @@
-    delay_state_rel:
-        component: meya.pass
-        delay:
-            relative: 60

@@ -1,0 +1,21 @@
+    luis_state:
+        component: meya.luis
+        properties:
+            text: "Your question here"
+            app_id: <YOUR_APP_ID>
+            api_key: <YOUR_API_KEY>
+            error_message: "I don't understand"
+            min_confidence: <MIN_CONFIDENCE> # e.g. 0.8
+        transitions:
+            bad: bad_state
+            good: good_state
+    bad_state:
+        component: meya.text
+        properties:
+            text: "Bad"
+        return: true
+    good_state:
+        component: meya.text
+        properties:
+            text: "Good"
+        return: true

@@ -1,8 +1,0 @@
-    input_pattern_state:
-        component: meya.input_pattern
-        properties:
-            text: Your question here
-            pattern: your_pattern_to_match
-            output: your_key
-            scope: user
-            require_match: true

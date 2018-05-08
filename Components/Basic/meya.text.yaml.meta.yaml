@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.text.yaml
+    ## meya.text
     Display text to the user.
     ### Properties
     | Property | Description | Required |

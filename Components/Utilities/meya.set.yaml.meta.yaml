@@ -1,0 +1,13 @@
+---
+docstring: |
+    ## meya.set
+    Allows you to store data in the specified datastore scope.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `value`|The data to store.|*Required*
+    `key`|The key for the data to store.|*Required*
+    `scope`|The datastore scope for the data. For example, `flow`, `user`, `bot`.|*Optional. Default:`flow`*
+language: yaml
+tags: []
+expanded: false

@@ -1,4 +1,0 @@
-    stop_schedule_state:
-        component: meya.schedule_stop
-        properties:
-            tag: your_tag

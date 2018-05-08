@@ -1,6 +1,0 @@
-    input_audio_state:
-        component: meya.input_audio
-        properties:
-            text: Your question here
-            output: audio_url
-            scope: flow

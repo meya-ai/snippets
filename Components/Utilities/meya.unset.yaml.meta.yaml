@@ -1,0 +1,12 @@
+---
+docstring: |
+    ## meya.unset
+    Allows you to delete data in the specified datastore scope. This removes the data associated with the `key` from the datastore.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `key`|The key for the data to remove.|*Required*
+    `scope`|The datastore scope for the data. For example, `flow`, `user`, `bot`.|*Optional. Default:`flow`*
+language: yaml
+tags: []
+expanded: false

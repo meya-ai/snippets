@@ -1,0 +1,23 @@
+    api_ai_state:
+        component: meya.api_ai
+        properties:
+            text: "Your question here"
+            client_access_token: <YOUR_TOKEN>
+            language: <LANGUAGE_CODE> # e.g. en
+            error_message: "I don't understand"
+            min_confidence: <MIN_CONFIDENCE> # e.g. 0.8
+            require_match: <BOOLEAN> # e.g. false
+        transitions:
+            bad: bad_state
+            good: good_state
+            no_match: ambiguous_state
+    bad_state:
+        component: meya.text
+        properties:
+            text: "Bad"
+        return: true
+    good_state:
+        component: meya.text
+        properties:
+            text: "Good"
+        return: true

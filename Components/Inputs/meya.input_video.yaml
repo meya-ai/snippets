@@ -1,0 +1,6 @@
+    input_video_state:
+        component: meya.input_video
+        properties:
+            text: "Your question here"
+            output: <YOUR_KEY>
+            scope: <SCOPE> # e.g. flow|user|bot

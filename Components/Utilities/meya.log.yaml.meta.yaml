@@ -1,0 +1,13 @@
+---
+docstring: |
+    ## meya.log
+    Write a custom log message. The message will appear in the **Logs** panel.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `context`|The actual message to log. Can be a string, dictionary, list, set, integer, or float. Can include Mustache syntax.|**Required**
+    `type`|The type of log. A string with no spaces.|*Optional. Default: `misc`*
+    `status`|One of `info`, `warning`, or `error`.|*Optional. Default:`info`*
+language: yaml
+tags: []
+expanded: false

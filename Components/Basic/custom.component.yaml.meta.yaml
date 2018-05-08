@@ -1,20 +1,20 @@
 ---
 docstring: |
-    ## custom.component.yaml
-    Use a custom Python component.
+    ## custom.component
+    In addition to 
     ### Properties
     You may pass data into the component by defining custom variables in the `properties` field. Within the custom component these variables can be accessed using:
     `self.properties.get("my_property_name")`
     ### Example
     Here is an example custom component. The flow state uses the component and passes two arguments to the component.
-    ```yaml
+    ```
     custom_state:
       component: my_component_name
       properties:
         num: 1
         name: "Meya"
     ```
-    ```python
+    ```
     # -*- coding: utf-8 -*-
     from meya import Component
 

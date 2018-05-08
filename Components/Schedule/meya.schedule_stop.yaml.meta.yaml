@@ -1,0 +1,12 @@
+---
+docstring: |
+    ## meya.schedule_stop
+    Stop an existing scheduled flow by specifying its tag name.
+    Note: If you want to schedule a flow for a particular user, you must specify a tag that is unique to that user (perhaps incorporating their user ID). If you use the same tag for all your users and one of your users wants to stop the scheduled event, `meya.schedule_stop` would stop the scheduled event for all of your users.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `tag`|The unique tag of the schedule to stop.|*Required*
+language: yaml
+tags: []
+expanded: false
