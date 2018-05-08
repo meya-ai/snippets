@@ -1,9 +1,16 @@
 ---
 docstring: |
-    ## meya.video.yaml
+    ## meya.video
     Triggers when someone enters a video.
     ### Properties
     *None.*
+    ### Flow scope variables
+    The `meya.video` trigger sets a variable on the `flow` scope. It can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
+
+    | Variable | Description |
+    |   ---    |     ---     |
+    `value`|The video's URL.
+    `_confidence`|The bot's confidence that this trigger is the best match given the user's input.
 language: yaml
 tags: []
 expanded: false

@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.start_chat.yaml
+    ## meya.start_chat
     Triggers when someone opens the Meya Web chat for the first time. Checks to see if the user has opened the chat before by referencing the specified key. Optionally only fires on a URL specified in the settings.
     ### Properties
     | Property | Description | Required|
@@ -8,6 +8,13 @@ docstring: |
     `key`|Set a key to isolate start chat events.|*Optional*
     `current_page_url`|A regex expression the current page URL must match in order to trigger the flow.|*Optional*
     `use_relative_path`|If `true`, `current_page_url` is given as a relative path from your domain root (e.g. `/index.html`).|*Optional. Default: `true`*
+    ### Flow scope variables
+    The `meya.start_chat` trigger sets a variable on the `flow` scope. It can be accessed from a flow using Mustache syntax: `{{ flow._current_page_url }}`, or from a Python component using `self.db.flow.get("_current_page_url")`.
+
+    | Variable | Description |
+    |   ---    |     ---     |
+    `_current_page_url`|The URL of the page on which the user initiated the chat.
+    `_confidence`|The bot's confidence that this trigger is the best match given the user's input.
 language: yaml
 tags: []
 expanded: false

@@ -1,6 +1,6 @@
 triggers:
   - type: meya.api_ai
-    settings:
+    properties:
         client_access_token: <YOUR_CLIENT_ACCESS_TOKEN>
         language: <LANGUAGE_CODE>
         intent: <INTENT_NAME>

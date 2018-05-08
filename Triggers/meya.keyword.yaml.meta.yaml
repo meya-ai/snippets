@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.keyword.yaml
+    ## meya.keyword
     Trigger the flow when the user's input exactly matches the keyword.
 
     This trigger can be handy when testing and debugging your bot. For example, you may have hidden flows that print information pertinent only to developers. You can restrict access by using the keyword trigger with a hard to guess keyword, like `t3St1ng`.
@@ -11,6 +11,13 @@ docstring: |
     |    ---   |     ---     |   ---   |
     `keyword`|The exact text the user's input must match.|*Required*
     `ignorecase`|If `true`, ignore the case of the message.|*Optional. Default: `true`*
+    ### Flow scope variables
+    The `meya.keyword` trigger sets a variable on the `flow` scope. It can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
+
+    | Variable | Description |
+    |   ---    |     ---     |
+    `value`|The user's original input.
+    `_confidence`|The bot's confidence that this trigger is the best match given the user's input.
 language: yaml
 tags: []
 expanded: false

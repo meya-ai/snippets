@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.luis.yaml
+    ## meya.luis
     Uses third party NLU service Luis.ai, to determine the user's intent and trigger the flow if a matching intent is found.
     ### Properties
     | Property | Description | Required|
@@ -12,8 +12,9 @@ docstring: |
     `min_confidence`|The minimum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `0.67`*
     `max_confidence`|The maximum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `1.0`*
     `subdomain`|The Luis.ai subdomain to use.|*Optional. Default: `westus`*
-    ### NLU data returned from Luis.ai
-    The following data are available on the `flow` scope.
+    ### Flow scope variables
+    The following data are available on the `flow` scope. They can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
+
     | Property | Description |
     |    ---   |     ---     |
     `_confidence`|The Luis.ai agent's confidence of the match.
@@ -24,13 +25,13 @@ docstring: |
     `source`|The source Luis.ai app.
 
     Matched entities will be available on `flow` scope using the entity name and also as a list by appending `_list`. For example the uttrance, "I love apples, pears and bananas." would result in the following `flow` scope data.
-        ```python
-        {
-            "intent": "fruits"
-            "fruit": "apples",
-            "fruit_list": ["apples", "pears", "bananas"]
-        }
-        ```
+    ```
+    {
+        "intent": "fruits"
+        "fruit": "apples",
+        "fruit_list": ["apples", "pears", "bananas"]
+    }
+    ```
 language: yaml
 tags: []
 expanded: false

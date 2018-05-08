@@ -1,9 +1,15 @@
 ---
 docstring: |
-    ## meya.voice_start_chat.yaml
+    ## meya.start_voice_chat
     Triggers every time a voice chat start without a specific invocation.
     ### Properties
     *None.*
+    ### Flow scope variables
+    The `meya.start_voice_chat` trigger sets a variable on the `flow` scope. It can be accessed from a flow using Mustache syntax: `{{ flow._confidence }}`, or from a Python component using `self.db.flow.get("_confidence")`.
+
+    | Variable | Description |
+    |   ---    |     ---     |
+    `_confidence`|The bot's confidence that this trigger is the best match given the user's input.
 language: yaml
 tags: []
 expanded: false

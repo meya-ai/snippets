@@ -1,11 +1,18 @@
 ---
 docstring: |
-    ## meya.catchall.yaml
+    ## meya.catchall
     Will trigger whenever a user says something that hasn't matched to any  other triggers you've specified. A flow launched by the `catchall` trigger can be used to activate a fall back conversation flow.
 
     Tip: Combine a `catchall` trigger with the `human.transfer` component to have the bot transfer to a human agent when it can't understand the user.
     ### Properties
     *None.*
+    ### Flow scope variables
+    The `meya.catchall` trigger sets a variable on the `flow` scope. It can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
+
+    | Variable | Description |
+    |   ---    |     ---     |
+    `value`|The user's original input.
+    `_confidence`|The bot's confidence that this trigger is the best match given the user's input.
 language: yaml
 tags: []
 expanded: false

@@ -1,9 +1,16 @@
 ---
 docstring: |
-    ## meya.image.yaml
+    ## meya.image
     Triggers when someone enters an image. The image URL becomes available in `flow.value`.
     ### Properties
     *None.*
+    ### Flow scope variables
+    The `meya.image` trigger sets a variable on the `flow` scope. It can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
+
+    | Variable | Description |
+    |   ---    |     ---     |
+    `value`|The image's URL.
+    `_confidence`|The bot's confidence that this trigger is the best match given the user's input.
 language: yaml
 tags: []
 expanded: false
