@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.regex.yaml
+    ## meya.regex
     Trigger the flow when the user's text input matches the regular expression. We recommend using pythex.org to test your regular expressions.
     ### Properties
     | Property | Description | Required|

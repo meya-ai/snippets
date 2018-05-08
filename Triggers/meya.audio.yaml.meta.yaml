@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.audio.yaml
+    ## meya.audio
     Triggers when someone uploads an audio file.
     ### Properties
     *None.*

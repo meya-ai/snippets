@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.video.yaml
+    ## meya.video
     Triggers when someone enters a video.
     ### Properties
     *None.*

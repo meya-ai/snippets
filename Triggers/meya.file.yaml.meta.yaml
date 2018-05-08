@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.file.yaml
+    ## meya.file
     Triggers when someone uploads a file.
     ### Properties
     *None.*

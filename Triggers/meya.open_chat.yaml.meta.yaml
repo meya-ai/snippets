@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.open_chat.yaml
+    ## meya.open_chat
     Triggers anytime someone opens the Meya Web chat. Optionally only fires on a URL specified in the settings. The `current_page_url` will be available on the `flow` scope.
     ### Properties
     | Property | Description | Required|

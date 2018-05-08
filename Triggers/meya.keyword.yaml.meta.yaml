@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.keyword.yaml
+    ## meya.keyword
     Trigger the flow when the user's input exactly matches the keyword.
 
     This trigger can be handy when testing and debugging your bot. For example, you may have hidden flows that print information pertinent only to developers. You can restrict access by using the keyword trigger with a hard to guess keyword, like `t3St1ng`.

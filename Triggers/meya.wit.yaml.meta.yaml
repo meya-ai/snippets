@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.wit.yaml
+    ## meya.wit
     Uses third party NLU service Wit.ai, to determine the user's intent and trigger the flow if a matching intent is found.
     ### Properties
     | Property | Description | Required|
@@ -12,7 +12,7 @@ docstring: |
     `max_confidence`|The maximum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `1.0`*
     ### NLU data returned from Wit.ai
     The following data are available on the `flow` scope.
-    
+
     | Property | Description |
     |    ---   |     ---     |
     `_confidence`|The Wit.ai agent's confidence of the match.

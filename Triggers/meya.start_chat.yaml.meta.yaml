@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.start_chat.yaml
+    ## meya.start_chat
     Triggers when someone opens the Meya Web chat for the first time. Checks to see if the user has opened the chat before by referencing the specified key. Optionally only fires on a URL specified in the settings.
     ### Properties
     | Property | Description | Required|

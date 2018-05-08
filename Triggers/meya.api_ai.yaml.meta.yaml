@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.api_ai.yaml
+    ## meya.api_ai
     Uses third party NLU service Dialogflow, to determine the user's intent and trigger the flow if a matching intent is found.
     ### Properties
     | Property | Description | Required|

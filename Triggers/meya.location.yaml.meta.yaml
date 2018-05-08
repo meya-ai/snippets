@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.location.yaml
+    ## meya.location
     Triggers when someone enters their location.
     ### Properties
     *None.*

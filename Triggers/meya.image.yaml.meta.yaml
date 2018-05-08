@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## meya.image.yaml
+    ## meya.image
     Triggers when someone enters an image. The image URL becomes available in `flow.value`.
     ### Properties
     *None.*
