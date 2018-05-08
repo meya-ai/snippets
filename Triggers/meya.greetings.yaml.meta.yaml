@@ -12,7 +12,7 @@ docstring: |
     `_intent`|This will always be `hi`.
     `intent`|Same as `_intent`. This will always be `hi`.
     `value`|The user's original input.
-    `intent_list|Similar to `_intent`, this will always be `['hi']`
+    `intent_list`|Similar to `_intent`, this will always be `['hi']`
     `_confidence`|The bot's confidence that this trigger is the best match given the user's input.
 language: yaml
 tags: []

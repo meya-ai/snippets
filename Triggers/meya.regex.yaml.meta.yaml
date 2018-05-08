@@ -17,7 +17,7 @@ docstring: |
     `_confidence`|The bot's confidence in finding a match for the input.
     ### Example 1
     Say your support ticket IDs follow the format <AA0000> and you want to trigger a flow when the user enters a ticket ID. The user may enter the ticket ID as part of a longer sentence. The following trigger will capture the user's ticket ID regardless of where it appears in the input. The `meya.text` component in the `say_ticket_num` state confirms that the regex pattern worked as expected.
-    ```yaml
+    ```
     triggers:
     - type: meya.regex
       settings:
@@ -35,7 +35,7 @@ docstring: |
     3. `GR9900`
     ### Example 2
     Say your users can subscribe to an email list by entering their email address. The address may be embedded in a longer sentence. The following trigger will capture the user's email address regardless of where it appears in the input. The `meya.text` component in the `say_email_address` state confirms that the regex pattern worked as expected.
-    ```yaml
+    ```
     triggers:
     - type: meya.regex
       settings:
