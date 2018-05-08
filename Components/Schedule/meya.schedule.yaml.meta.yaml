@@ -4,6 +4,7 @@ docstring: |
     Schedule a flow to run either at set periodic intervals, or at specific times using cron.
     ### Properties
     These properties are common to both periodic and cron versions of `meya.schedule`.
+    
     | Property | Description | Required |
     |   ----   |     ---     |   ----   |
     `flow`|The name of the flow to run.|*Required*
