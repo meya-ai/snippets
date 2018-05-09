@@ -1,0 +1,8 @@
+---
+docstring: |
+    ## hello_world
+    The proverbial "Hello, World!" starter flow. Type "hi" and the bot will
+    respond with "Hello, World!"
+language: yaml
+tags: []
+expanded: false

@@ -1,0 +1,22 @@
+---
+docstring: |
+    ## Hello World!
+    The proverbial "Hello, World!" starter component. 
+
+    Create a flow containing a single state that calls this component.
+    ```
+    triggers:
+      - type: keyword
+        settings:
+            ignorecase: true
+            keyword: hi
+    name: hello_world
+    states:
+        first:
+            component: hello_world
+    ```
+
+    Type "hi" and the bot will respond with "Hello, World!"
+language: yaml
+tags: []
+expanded: false

@@ -1,0 +1,14 @@
+---
+docstring: |
+    ## transfer_to_human
+    It's a good idea to have a fallback flow that will be triggered whenever the bot doesn't understand the user's input. You can prevent frustration by offering the user a chance to contact your human agents.
+
+    ### How it works
+    This simple flow uses the `catchall` trigger which will launch this flow whenever the user's input doesn't match any other flow's trigger.
+
+    The `meya.nlp_yes_no` component is backed by an NLU agent that can detect `yes` and `no` intents. If the user chooses not to talk to a human agent, the bot transitions to the `end` state.
+
+    If the user opts to talk to a human agent, the `human.transfer` component initiates the transfer. Note that you need to have a CRM integration connected to your bot in order for the `human.transfer` component to work as expected.
+language: yaml
+tags: []
+expanded: false

@@ -1,0 +1,22 @@
+---
+docstring: |
+    ## API request
+    This component demonstrates how to make an API call and return the results to the user.
+
+    Create a flow containing a single state that calls this component.
+    ```
+    triggers:
+      - type: keyword
+        settings:
+            ignorecase: true
+            keyword: hi
+    name: api_request
+    states:
+        first:
+            component: api_request
+    ```
+
+    Type "hi" and the bot will respond with a joke.
+language: yaml
+tags: []
+expanded: false
