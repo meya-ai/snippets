@@ -1,0 +1,5 @@
+triggers:
+  - type: <TRIGGER_TYPE>
+name: <FLOW_NAME>
+states:
+    first:

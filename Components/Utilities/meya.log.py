@@ -1,1 +1,0 @@
-        self.log(context, type=type, status=status)

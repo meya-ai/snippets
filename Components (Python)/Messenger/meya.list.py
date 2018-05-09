@@ -28,7 +28,7 @@ class CardComponent(Component):
                           image_url="http://i.imgur.com/AjOFeBV.jpg",
                           buttons=[button],
                           default_action=default_action)
-                          
+
         elements.append(element)
 
         list_button = Button(text="Show me Mandlebrot", action="next")

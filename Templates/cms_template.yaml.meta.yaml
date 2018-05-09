@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## Empty CMS file
+    ## CMS template
     This snippet provides the basic format of a CMS file.
     ### Properties
     | Property | Description | Required|
@@ -11,13 +11,11 @@ docstring: |
     `value`|The actual content. In addition to text, `value` can include URLs, emoji, and Mustache syntax.|*Required*
     `tag`|Useful for A/B testing content with an analytics provider.|*Optional*
     `type`|This should be set to `string`.|*Optional*
-
     In addition, there is one file-level property.
-
+    
     | Property | Description | Required|
     |    ---   |     ---     |   ---   |
     `space`|**This is not set per CMS entry, but rather at the file level**. The name of the `space` is the same as the CMS filename without the `.yaml` extension.|*Required*
-
     In general, a `space`, or CMS file, should contain related content (e.g. `faqs`, `pricing`, `account_mgmt`).
     In your flow or component code you can reference this `space` and `key` combination and the bot will display the appropriate content.
     Within a flow: `"{{ cms.<space>.<key> }}"`
@@ -35,7 +33,7 @@ docstring: |
     ```
     ### Language priority
     If you wish to internationalize your bot, you may create multiple entries with the same `key` and `space`, but different `language` codes. The bot will select the appropriate response using the following rules, from highest to lowest priority. For an example, see the `international` file in the Examples/CMS folder.
-
+    
     1. If the user's language has been detected using an NLU trigger or NLU component, the bot will respond in that language, assuming an entry in that language exists for that `space` and `key` combination.
     2. If the user's language is **not** known, or if the bot does not have an entry in the user's language, the bot will respond in its default language, which can be set in the **Settings** panel from the bot dashboard.
     3. If the default language has not been set, the bot will default to English.

@@ -12,7 +12,7 @@ class CardComponent(Component):
           Button(text='Woolly Mammoth', action="extinct")
         ]
         card = TextWithButtons(text=text, buttons=buttons, mode="buttons")
-        
+
         # create the message (note the `card` rather than `text`)
         message = self.create_message(card=card)
 
