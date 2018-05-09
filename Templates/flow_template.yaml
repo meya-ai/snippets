@@ -1,0 +1,5 @@
++triggers:
++  - type: <TRIGGER_TYPE>
++states:
++    first:
++        

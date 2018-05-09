@@ -1,0 +1,61 @@
+---
+docstring: |
+    ## Component template
+    This snippet provides the basic format of a custom Python component file.
+    ### Using a Python component
+    You can use  a Python component in a flow by specifying the component's filename without the extension. For example, a Python component called `my_component.py` would be referenced like this:
+    ```
+    my_state:
+        component: my_component
+    ```
+    ### Component properties
+    You can send properties to a Python component using the following syntax.
+    ```
+    my_state:
+        component: my_component
+        properties:
+            prop_1: 1.0
+            prop_2: "Hi"
+    ```
+    The properties can be accessed within the component using the following syntax.
+    ```
+    prop_1 = self.properties.get("prop_1")
+    prop_2 = self.properties.get("prop_2")
+    ```
+    ### Returning actions
+    By returning an action, you can control what your bot does after executing this component. By default, the component will return `action="next"`, which will automatically transition to the next state in the flow. The following component returns a custom action which we then must handle in the state's `transitions` section.
+    ```
+    from meya import Component
+
+
+    class MyComponent(Component):
+        def start(self):
+            prop_1 = self.properties.get("prop_1")
+            action = "next" if prop_1 else "skip"
+            return self.respond(action=action)
+    ```
+    The flow code:
+    ```
+    my_state:
+        component: my_component
+        properties:
+            prop_1: false
+        transitions:
+            next: next_state
+            skip: final_state
+
+    next_state:
+        component: meya.text
+        properties:
+            text: "You won't see this text, because prop_1 == false."
+        return: true
+
+    final_state:
+        component: meya.text
+        properties:
+            text: "But you will see this text."
+        return: true
+    ```
+language: yaml
+tags: []
+expanded: false

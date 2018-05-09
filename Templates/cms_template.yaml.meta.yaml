@@ -1,6 +1,6 @@
 ---
 docstring: |
-    ## Empty CMS file
+    ## CMS template
     This snippet provides the basic format of a CMS file.
     ### Properties
     | Property | Description | Required|
