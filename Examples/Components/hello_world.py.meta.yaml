@@ -16,7 +16,7 @@ docstring: |
             component: hello_world
     ```
 
-    Type "hi" and the bot will respond with "Hello, World!"
+    Type `hi` and the bot will respond with `Hello, World!`.
 language: yaml
 tags: []
 expanded: false

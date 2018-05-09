@@ -16,7 +16,7 @@ docstring: |
             component: api_request
     ```
 
-    Type "hi" and the bot will respond with a joke.
+    Type `hi` and the bot will respond with a joke.
 language: yaml
 tags: []
 expanded: false

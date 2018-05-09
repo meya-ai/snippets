@@ -1,7 +1,7 @@
 ---
 docstring: |
     ## welcome
-    Answering frequently asked questions is a very common and powerful use-case for bots. Bot CMS is makes this easy.
+    Answering frequently asked questions is a very common and powerful use-case for bots. Bot CMS makes this easy.
 
     ### Create the CMS file
     These steps have already been done for you. See `faq` in the `cms` folder.
@@ -11,12 +11,12 @@ docstring: |
     3. Add an answer for each FAQ as CMS `outputs`.
 
     ### Connect an NLU agent
-    For this example bot to work you'll need to create and attach a Natural Language Understanding agent/app to the `faq` space. A detailed guide can be found <a href="https://dash.readme.io/project/meya/v1.2/docs/tutorial-2-using-bot-cms-to-train-an-nlu-agent" target="_blank">here</a>.
+    For this example bot to work you'll need to create and attach a Natural Language Understanding agent/app to the `faq` space. A detailed guide can be found [here](https://docs.meya.ai/docs/bot-cms-faq-use-case).
 
     **Note: Any time you make changes to Bot CMS inputs, the attached NLU model will be overwritten.** We recommend setting up a new NLU agent for this example.
 
     ### Create an FAQ flow
-    The `faq` flow will be launch when the user's input matches one of the FAQ intents we trained our NLU agent with. Note that the user does not have to say one of the CMS inputs word-for-word. As long as they say something close to one of the CMS inputs the NLU agent will return the correct intent and trigger the `faq` flow.
+    The `faq` flow will launch when the user's input matches one of the FAQ intents we trained our NLU agent with. Note that the user does not have to say one of the CMS inputs word-for-word. As long as they say something close to one of the CMS inputs the NLU agent will return the correct intent and trigger the `faq` flow.
 
     The `faq` flow should use the `meya.cms_nlu` trigger.
 
