@@ -1,0 +1,6 @@
+-   io: output
+    key: <KEY>
+    language: en
+    tag: ""
+    type: string
+    value: <MY_VALUE>
