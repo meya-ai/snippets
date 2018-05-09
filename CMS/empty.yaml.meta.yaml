@@ -12,6 +12,7 @@ docstring: |
     `tag`|Useful for A/B testing content with an analytics provider.|*Optional*
     `type`|This should be set to `string`.|*Optional*
     In addition, there is one file-level property.
+    
     | Property | Description | Required|
     |    ---   |     ---     |   ---   |
     `space`|**This is not set per CMS entry, but rather at the file level**. The name of the `space` is the same as the CMS filename without the `.yaml` extension.|*Required*
