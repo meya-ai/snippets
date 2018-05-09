@@ -1,5 +1,4 @@
-+triggers:
-+  - type: <TRIGGER_TYPE>
-+states:
-+    first:
-+        
+triggers:
+  - type: <TRIGGER_TYPE>
+states:
+    first:        
