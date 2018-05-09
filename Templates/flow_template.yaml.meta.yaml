@@ -6,8 +6,6 @@ docstring: |
     Depending on the trigger type, additional trigger settings may be required.
     
     Optionally, you may include an `intents` section for advanced intent routing use-cases.
-    
-    Note that the `name` parameter is no longer required. If included, it will have no effect; the flow's name comes from the filename.
 language: yaml
 tags: []
 expanded: false
