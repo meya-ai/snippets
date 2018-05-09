@@ -8,9 +8,9 @@ docstring: |
     `io`|Either `input` or `output`. `input`s can be used to train an NLU agent/model.|*Required*
     `key`|An identifier used to access this content from within a flow or Python component.|*Required*
     `language`|A 2-letter ISO 639-1 language code.|*Required*
-    `tag`|Useful for A/B testing content with an analytics provider.|*Optional*
-    `type`|This should be set to `string`.|*Required*
     `value`|The actual content. In addition to text, `value` can include URLs, emoji, and Mustache syntax.|*Required*
+    `tag`|Useful for A/B testing content with an analytics provider.|*Optional*
+    `type`|This should be set to `string`.|*Optional*
 
     In addition, there is one file-level property.
 
@@ -19,11 +19,11 @@ docstring: |
     `space`|**This is not set per CMS entry, but rather at the file level**. The name of the `space` is the same as the CMS filename without the `.yaml` extension.|*Required*
 
     In general, a `space`, or CMS file, should contain related content (e.g. `faqs`, `pricing`, `account_mgmt`).
-    In your flow or component code you can reference this `space` and `key` and the bot will display the appropriate content.
+    In your flow or component code you can reference this `space` and `key` combination and the bot will display the appropriate content.
     Within a flow: `"{{ cms.<space>.<key> }}"`
     Within a Python component: `self.cms.get("<space>", "<key>")`
     ### Example
-    This flow code works with the code snippet above to display a greeting to the user.
+    This flow code works with the code snippet above to display a greeting to the user, assuming the CMS filename is `general.yaml`.
     ```
     triggers:
       - type: meya.start_chat
@@ -34,7 +34,7 @@ docstring: |
                 text: "{{ cms.general.welcome }}"
     ```
     ### Language priority
-    If you wish to internationalize your bot, you may create multiple entries with the same `key` and `space`, but different `language` codes. The bot will select the appropriate response using the following rules, from highest to lowest priority. For an example, see the `international` file in this folder.
+    If you wish to internationalize your bot, you may create multiple entries with the same `key` and `space`, but different `language` codes. The bot will select the appropriate response using the following rules, from highest to lowest priority. For an example, see the `international` file in the Examples/CMS folder.
     1. If the user's language has been detected using an NLU trigger or NLU component, the bot will respond in that language, assuming an entry in that language exists for that `space` and `key` combination.
     2. If the user's language is **not** known, or if the bot does not have an entry in the user's language, the bot will respond in its default language, which can be set in the **Settings** panel from the bot dashboard.
     3. If the default language has not been set, the bot will default to English.
