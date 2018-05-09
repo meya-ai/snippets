@@ -13,17 +13,17 @@ docstring: |
     `value`|The actual content. In addition to text, `value` can include URLs, emoji, and Mustache syntax.|*Required*
 
     In addition, there is one file-level property.
-    
+
     | Property | Description | Required|
     |    ---   |     ---     |   ---   |
-    `space`|**This should not set this per CMS entry, but rather at the file level**. The name of the `space` is the same as the CMS filename without the `.yaml` extension.|*Required*
+    `space`|**This is not set per CMS entry, but rather at the file level**. The name of the `space` is the same as the CMS filename without the `.yaml` extension.|*Required*
 
     In general, a `space`, or CMS file, should contain related content (e.g. `faqs`, `pricing`, `account_mgmt`).
-    In your flow or component code you can reference this `space` and `key` and the bot will randomly select one of the matching options.
+    In your flow or component code you can reference this `space` and `key` and the bot will display the appropriate content.
     Within a flow: `"{{ cms.<space>.<key> }}"`
     Within a Python component: `self.cms.get("<space>", "<key>")`
     ### Example
-    This flow code works with the code snippet above to display one of three possible greetings to the user.
+    This flow code works with the code snippet above to display a greeting to the user.
     ```
     triggers:
       - type: meya.start_chat
