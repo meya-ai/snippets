@@ -11,7 +11,8 @@ class CardComponent(Component):
           Button(text='Not cute', action="next"),
           Button(text='Kind of cute', action="next")
         ]
-        card = ImageWithButtons(image_url=image_url, buttons=buttons, mode="buttons")
+        card = ImageWithButtons(image_url=image_url, buttons=buttons,
+                                mode="buttons")
 
         # create the message (note the `card` rather than `text`)
         message = self.create_message(card=card)

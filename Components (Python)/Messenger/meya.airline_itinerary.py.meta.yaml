@@ -1,0 +1,70 @@
+---
+docstring: |
+    ## meya.airline_itinerary
+    Send a confirmation message that contains the itinerary and receipt.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `intro_message`|Text displayed to the user before presenting the flight itinerary card.|*Optional*
+    `locale`|Two-letter language region code. Must be a two-letter ISO 639-1 language code and a ISO 3166-1 alpha-2 region code separated by an underscore character. Used to translate field labels (e.g. `en_US`).|*Optional*
+    `pnr_number`|Passenger Name Record number (i.e. booking number)|*Required*
+    `passenger_info`|A YAML list containing one entry per passenger. Each passenger item should contain a `name`, `ticket_number`, and `passenger_id` fields.|*Required*
+    `name`|The full name of the passenger, including title.|*Required*
+    `ticket_number`|The passenger's ticket number.|*Optional*
+    `passenger_id`|The passenger unique ID.|*Required*
+    `flight_info`|A YAML list containing one entry per flight connection. Each entry contains a `connection_id`, `segment_id`, `flight_number`, `aircraft_type`, `departure_airport`, `arrival_airport`, `flight_schedule`, and `travel_class`|*Required*
+    `connection_id`|Used to group segments of a connection together. Must be unique within the itinerary.|*Required*
+    `segment_id`|The `segment_id` of the `passenger_segment_info` object.|*Required*
+    `flight_number`|The flight number.|*Required*
+    `aircraft_type`|The type of aircraft.|*Optional*
+    `departure_airport`|A YAML dictionary containing the `airport_code` and `city` fields.|*Required*
+    `airport_code`|The airport code of the arrival airport.|*Required*
+    `city`|The arrival city.|*Required*
+    `arrival_airport`|A YAML dictionary containing the `airport_code` and `city` fields.|*Required*
+    `airport_code`|The airport code of the arrival airport.|*Required*
+    `city`|The arrival city.|*Required*
+    `flight_schedule`|A YAML dictionary containing the `departure_time` and `arrival_time` fields.|*Required*
+    `departure_time`|Departure time in departure airport timezone. Must be in the ISO 8601-based format YYYY-MM-DDThh:mm (e.g. 2015-09-26T10:30).|*Required*
+    `arrival_time`|Arrival time in arrival airport timezone. Must be in the ISO 8601-based format YYYY-MM-DDThh:mm (e.g. 2015-09-26T10:30).|*Optional*
+    `travel_class`|The travel class. Must be one of `economy`, `business`, or `first_class`.|*Required*
+    `passenger_segment_info`||*Required*
+    `segment_id`|Used to identify a flight segment. Must be unique within the itinerary.|*Required*
+    `passenger_id`|The `passenger_id` of `passenger_info`.|*Required*
+    `seat`|The passenger's seat number.|*Required*
+    `seat_type`|The seat type for the passenger (e.g. "economy comfort").|*Required*
+    `product_info`|A YAML list of products the passenger purchased. Maximum of 4 items is supported. Each entry must include a `title` and `value` field.|*Optional*
+    `title`|The product title.|*Required*
+    `value`|The product description.|*Required*
+    `price_info`|A YAML list itemizing the total price. Supports up to four items. Each item is a dictionary containing the `title`, `amount`, and `currency` fields .|*Optional*
+    `title`|The price info title.|*Required*
+    `amount`|The price amount.|*Required*
+    `currency`|Pricing currency. Must be a three digit ISO-4217-3 code.|*Optional*
+    `base_price`|The base price amount.|*Optional*
+    `tax`|The tax amount.|*Optional*
+    `total_price`|The total price of the booking.|*Required*
+    `currency`|Pricing currency. Must be a three digit ISO-4217-3 code.|*Required*
+    `passenger_name`|The name of the passenger.|*Required*
+    `travel_class`|The passenger's travel class.|*Optional*
+    `seat`|The passenger's seat number|*Optional*
+    `auxiliary_fields`|A YAML list of data to display in the auxiliary section. If present, must include one `label` and `value` per list entry.|*Optional*
+    `secondary_fields`|A YAML list of data to display in the secondary section. If present, must include one `label` and `value` per list entry.|*Optional*
+    `logo_image_url`|A URL for the logo image.|*Required*
+    `header_image_url`|A URL for the header image.|*Optional*
+    `qr_code`|A QR code linking to more information about the flight.|*Required*
+    `above_bar_code_image_url`|URL of thin image above the barcode.|*Required*
+    `flight_info`|A YAML dictionary containing the `flight_number`, `departure_airport`, `arrival_airport`, and `flight_schedule` fields.|
+    `flight_number`|The flight number.|*Required*
+    `departure_airport`|A YAML dictionary containing the `airport_code`, `city`, `terminal`, and `gate` fields.|*Required*
+    `airport_code`|The airport code of the departure airport.|*Required*
+    `city`|The city of departure.|*Required*
+    `terminal`|The terminal of the departing flight.|*Required*
+    `gate`|The gate for the departing flight.|*Required*
+    `arrival_airport`|A YAML dictionary containing the `airport_code` and `city` fields.|*Required*
+    `airport_code`|The airport code of the arrival airport.|*Required*
+    `city`|The arrival city.|*Required*
+    `flight_schedule`|A YAML dictionary containing the `departure_time` and `arrival_time` fields.|*Required*
+    `departure_time`|Departure time in departure airport timezone. Must be in the ISO 8601-based format YYYY-MM-DDThh:mm (e.g. 2015-09-26T10:30).|*Required*
+    `arrival_time`|Arrival time in arrival airport timezone. Must be in the ISO 8601-based format YYYY-MM-DDThh:mm (e.g. 2015-09-26T10:30).|*Optional*
+language: yaml
+tags: []
+expanded: false

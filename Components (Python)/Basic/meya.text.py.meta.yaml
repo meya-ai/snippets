@@ -1,0 +1,11 @@
+---
+docstring: |
+    ## meya.text
+    Display text to the user.
+    ### Properties
+    | Property | Description | Required |
+    |   ----   |     ---     |   ----   |
+    `text`|Text to display to the user.|*Required*
+language: yaml
+tags: []
+expanded: false
