@@ -1,0 +1,6 @@
+    human_transfer:
+        component: human.transfer
+        properties:
+            text: "<YOUR_TEXT>"
+            assignee: "<AGENT_NAME>"
+            note: "<NOTE>"

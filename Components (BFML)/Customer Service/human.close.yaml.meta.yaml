@@ -1,0 +1,12 @@
+---
+docstring: |
+    ## human.close
+    End a conversation with an agent from within a flow.
+
+    **Currently only supported for the Intercom and Salesforce Live Agent integrations.**
+
+    ### Properties
+    *None.*
+language: yaml
+tags: []
+expanded: false

@@ -1,0 +1,2 @@
+    pause_state:
+        component: meya.pause # Only for use with Salesforce Live Agent!
