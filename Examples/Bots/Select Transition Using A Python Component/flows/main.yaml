@@ -1,0 +1,31 @@
+triggers:
+  - type: meya.keyword
+    settings:
+        ignorecase: true
+        keyword: main
+name: main
+states:
+    compare_user_type:
+        component: complex_transition
+        transitions:
+            user: user_state
+            moderator: moderator_state
+            admin: admin_state
+
+    user_state:
+        component: meya.text
+        properties:
+            text: "User state"
+        return: true
+
+    moderator_state:
+        component: meya.text
+        properties:
+            text: "Moderator state"
+        return: true
+
+    admin_state:
+        component: meya.text
+        properties:
+            text: "Admin state"
+        return: true

@@ -1,0 +1,7 @@
+---
+docstring: |
+    ## transition
+    For a detailed explanation of how this code works, please review the `complex_transition` file contained in the `components` folder.
+language: yaml
+tags: []
+expanded: false

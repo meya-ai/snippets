@@ -1,0 +1,23 @@
+triggers:
+  - type: meya.start_chat
+name: welcome
+states:
+    init_last_seen:
+        component: update_last_seen
+
+    start_activity_monitor:
+        flow: meya.schedule
+        data:
+            tag: "{{ user.id }}_activity_monitor"
+            flow: activity_monitor
+            period: minutes
+            interval: 30
+
+    say_welcome:
+        component: meya.text
+        properties:
+            text: "Hi! I'm a bot"
+
+    goto_main:
+        flow: main
+        return: true

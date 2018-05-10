@@ -1,0 +1,36 @@
+---
+docstring: |
+    ## welcome
+    Answering frequently asked questions is a very common and powerful use-case for bots. Bot CMS makes this easy.
+
+    ### Create the CMS file
+    These steps have already been done for you. See `faq` in the `cms` folder.
+
+    1. Create a file in the `cms` folder called `faq.yaml`. This creates a CMS `space` called `faq`.
+    2. For each FAQ, enter 3-5 example questions as CMS `inputs`.
+    3. Add an answer for each FAQ as CMS `outputs`.
+
+    ### Connect an NLU agent
+    For this example bot to work you'll need to create and attach a Natural Language Understanding agent/app to the `faq` space. A detailed guide can be found [here](https://docs.meya.ai/docs/bot-cms-faq-use-case).
+
+    **Note: Any time you make changes to Bot CMS inputs, the attached NLU model will be overwritten.** We recommend setting up a new NLU agent for this example.
+
+    ### Create an FAQ flow
+    The `faq` flow will launch when the user's input matches one of the FAQ intents we trained our NLU agent with. Note that the user does not have to say one of the CMS inputs word-for-word. As long as they say something close to one of the CMS inputs the NLU agent will return the correct intent and trigger the `faq` flow.
+
+    The `faq` flow should use the `meya.cms_nlu` trigger.
+
+    Only one component is needed: `meya.cms_text`. This component is designed for the FAQ use-case. It will output the corresponding CMS entity matching the intent returned by the NLU agent. For example, if the user asks about pricing, the bot will return the value of `{{ cms.faq.pricing }}`.
+
+    ### Testing the bot
+    As with any machine-learned software, you'll need to test that it works sufficiently for your use-case. If there are missed user intents ([recall](https://en.wikipedia.org/wiki/Precision_and_recall) - false negatives) or misfired triggers ([precision](https://en.wikipedia.org/wiki/Precision_and_recall) - false positives), you'll need add/modify your CMS inputs.
+
+    ### Advanced use-cases
+    It is possible to construct more complicated flows to support more advanced use-cases:
+
+    1. Segue certain Q&A pairs into longer flows (lead-gen for example)
+    2. Output multiple messages for long answers
+    3. Use cards, images, and other message UI elements.
+language: yaml
+tags: []
+expanded: false

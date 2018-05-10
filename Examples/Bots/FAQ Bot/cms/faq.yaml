@@ -1,0 +1,32 @@
+-   io: input
+    key: pricing
+    language: en
+    value: "pricing"
+-   io: input
+    key: pricing
+    language: en
+    value: "how much does this cost"
+-   io: input
+    key: pricing
+    language: en
+    value: "pricing info"
+-   io: output
+    key: pricing
+    language: en
+    value: "We have a variety of plans available. Contact sales for more information."
+-   io: input
+    key: password
+    language: en
+    value: "change my password"
+-   io: input
+    key: password
+    language: en
+    value: "update password"
+-   io: input
+    key: password
+    language: en
+    value: "I forget my password"
+-   io: output
+    key: password
+    language: en
+    value: "You can update your password by clicking the Forgot Password link on the login page."

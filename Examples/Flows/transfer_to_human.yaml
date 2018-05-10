@@ -1,0 +1,24 @@
+triggers:
+    - type: meya.catchall
+name: transfer_to_human
+states:
+    ask_to_transfer:
+        component: meya.nlp_yes_no
+        properties:
+            text: "I'm sorry, I didn't understand that. Would you like to talk to a human?"
+        transitions:
+            'yes': transfer_to_human
+            'no': end
+
+    transfer_to_human:
+        component: human.transfer
+        properties:
+            text: "One moment while I transfer you to a live agent. This may take a few minutes..."
+            assignee: "Support"
+        return: true
+
+    end:
+        component: meya.text
+        properties:
+            text: "Okay, that's fine!"
+        return: true

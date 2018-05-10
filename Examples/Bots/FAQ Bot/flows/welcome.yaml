@@ -1,0 +1,8 @@
+triggers:
+  - type: start_chat
+name: welcome
+states:
+    say_welcome:
+        component: meya.text
+        properties:
+            text: "Hi! Ask me about pricing or password resets, and I'll tell you the answer!"

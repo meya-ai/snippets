@@ -1,0 +1,13 @@
+---
+docstring: |
+    ## complex_transition
+    Transitioning to another state is often done based on a user's input, or the result of a simple comparison using `meya.conditional_equal`. Sometimes, however, you'll find you want to transition based on something more complex, such as the result of comparing multiple variables.
+
+    ### Example
+    Say you have a `user` scope variable, `user_type`, which can be set to either `user`, `moderator`, or `admin`. You want to route the user to a particular state based on their `user_type`. This would require two `meya.conditional_equal` components which quickly clutters up the flow code. Instead, this component (see code above) will do the comparison and return an `action` we can use in our `transitions` section.
+    
+    ### Next steps
+    Selecting your transitions from within a Python component is powerful. You could select transitions based on multiple variables, or even the result of a request to an API or database.
+language: yaml
+tags: []
+expanded: false
