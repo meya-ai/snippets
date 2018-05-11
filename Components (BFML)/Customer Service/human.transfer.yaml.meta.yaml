@@ -47,7 +47,7 @@ docstring: |
 
     ### Example
     ```
-    transfer_state:
+    transfer_to_agent:
         component: human.transfer
         properties:
             text: >

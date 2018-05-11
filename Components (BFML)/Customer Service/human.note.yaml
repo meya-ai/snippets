@@ -1,4 +1,4 @@
     send_note:
         component: human.note
         properties:
-            text: "They are a great customer! Treat them right."
+            text: <TEXT>
