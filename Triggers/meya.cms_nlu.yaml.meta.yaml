@@ -1,0 +1,38 @@
+---
+docstring: |
+    ## meya.cms_nlu
+    Uses a Bot CMS-trained NLU agent to determine the user's intent and trigger the flow if a matching intent is found.
+
+    ### Properties
+    | Property | Description | Required|
+    |    ---   |     ---     |   ---   |
+    `space`|The space, or folder, in which the key is stored in Bot CMS.|*Required*
+    `key`|The key, or intent, which will be returned as an action.|*Required*
+    `language`|The two character language identifier. Example: `en`.|*Optional*
+    `min_confidence`|The minimum confidence required to match the entity.|*Optional. Default: `0.67`*
+    `detect_language`|If `true`, `{{ flow.language }}` will be set to the language the NLU agent detected from the user's input.|*Optional. Default: `false`*
+    `use_keyword_fallback`|If checked, a keyword-based approach is used if no NLU spaces are provided.|*Optional*
+    
+    ### Flow scope variables
+    The following data are available on the `flow` scope. They can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
+
+    | Property | Description |
+    |    ---   |     ---     |
+    `_confidence`|The agent's confidence of the match.
+    `_intent`|The intent the agent matched.
+    `value`|The user's original text.
+    `fulfillment.speech`|The agent's response if you've set fulfillment phrases within the agent.
+    `parameters.simplified`|A simplified version of the query sent to the agent.
+    `source`|The source agent.
+
+    Matched entities will be available on `flow` scope using the entity name and also as a list by appending `_list`. For example the uttrance, "I love apples, pears and bananas." would result in the following `flow` scope data.
+    ```
+    {
+        "intent": "fruits"
+        "fruit": "apples",
+        "fruit_list": ["apples", "pears", "bananas"]
+    }
+    ```
+language: yaml
+tags: []
+expanded: false
