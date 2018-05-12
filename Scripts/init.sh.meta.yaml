@@ -1,0 +1,12 @@
+---
+docstring: |
+  ## init.sh
+  This script is used to initialize a bot for local development. The script will:
+
+  1. create a local folder using your botname (any name can be used)
+  2. create and activate `virtualenv` to install `meya` python package
+  3. initialize a `meya-config.yaml` file to sync with Meya Cloud Platform
+  4. start a process that continually monitors and sync local file changes (`meya-cli watch`)
+language: yaml
+tags: []
+expanded: false
