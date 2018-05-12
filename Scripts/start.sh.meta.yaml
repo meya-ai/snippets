@@ -1,0 +1,13 @@
+---
+docstring: |
+  ## start.sh
+  This script is used to start a `meya-cli watch` process for an existing bot. The script assumes you've already initialized a bot folder locally.
+
+  **NOTE: script assumes your local code is the ground truth. Cloud code will be overwritten.**
+
+  1. activate `virtualenv` and update `meya` python package
+  2. sync your local code to Meya Cloud Platform.
+  3. start a process that continually monitors and sync local file changes (`meya-cli watch`)
+language: yaml
+tags: []
+expanded: false
