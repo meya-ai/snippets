@@ -1,6 +1,6 @@
 ---
 docstring: |
-  ## start.sh
+  ## push.sh
   This script is used to start a `meya-cli watch` process for an existing bot. The script assumes you've already initialized a bot folder locally.
 
   **NOTE: script assumes your local code is the ground truth. Cloud code will be overwritten.**
