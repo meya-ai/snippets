@@ -7,7 +7,7 @@ docstring: |
     | Property | Description | Required|
     |    ---   |     ---     |   ---   |
     `space`|The space, or folder, in which the key is stored in Bot CMS.|*Required*
-    `key`|The key, or intent, which will be returned as an action.|*Required*
+    `key`|The key, or intent, which will be returned as an action.|*Optional*
     `language`|The two character language identifier. Example: `en`.|*Optional*
     `min_confidence`|The minimum confidence required to match the entity.|*Optional. Default: `0.67`*
     `detect_language`|If `true`, `{{ flow.language }}` will be set to the language the NLU agent detected from the user's input.|*Optional. Default: `false`*
