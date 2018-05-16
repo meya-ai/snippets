@@ -1,7 +1,7 @@
 ---
 docstring: |
     ## meya.input_cms
-    Accepts input from the user and matches it against a Bot CMS-trained NLU agent. It also extracts entity data and makes that available on the `flow` scope.
+    Accepts input from the user and matches it against a Bot CMS-trained NLU agent. It also extracts entity data and makes that available on the `flow` scope. Buttons are also supported.
 
     ### Properties
     | Property | Description | Required |
