@@ -1,0 +1,6 @@
+    transfer_to_agent:
+        component: human.transfer
+        properties:
+            text: <TEXT>
+            assignee: <AGENT_NAME>
+            note: <TEXT>

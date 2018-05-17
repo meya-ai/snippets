@@ -1,0 +1,66 @@
+---
+docstring: |
+    ## human.transfer
+    This component allows you to transfer control of your bot to a human agent. You can also add a note with relevant information about the customer.
+
+    It's a good idea to have a fallback flow using the `meya.catchall` trigger that will launch whenever your bot doesn't understand the user. In the fallback flow, offer to transfer the user to a human agent who can help them. This will go a long way toward ensuring your users have a positive experience with your bot, and that you don't unnecessarily lose them to frustration.
+
+    ### Properties
+    | Property | Description | Required|
+    |    ---   |     ---     |   ---   |
+    `text`|The text to display to the user.|*Optional. Default: `null`*
+    `speech`|The text to speak to the user.|*Optional. Only applies to voice integrations.*
+    `assignee`|A string indicating who to assign the conversation to. If `null`, a random human agent will be assigned (Intercom and Front only) If set, the conversation will be assigned to the agent matching the string.|*Optional. Default: `null`*
+    `note`|The text of the note to display to the agent in the customer service software. Markdown is supported by many customer service integrations.|*Optional. Default: `null`*
+    `timeout`|The number of seconds to wait before cancelling the transfer and reassigning the conversation to the bot.|*Optional. Default: `null`*
+    `timeout_flow`|The flow to invoke if the transfer times out.|*Optional*
+    `timeout_action`|The action to invoke when starting the timeout flow.|*Optional. Default: `null`*
+    `timeout_data`|The data to pass to the timeout flow.|*Optional*
+
+    ### Timeout on transfer
+    If `timeout` is specified (in seconds), the bot will automatically take back control if a human agent doesn't respond in time. Optionally, you can automatically start a new flow when the timeout occurs using `timeout_flow`.
+
+    ### Salesforce Live Agent
+    In addition to the above properties, the Salesforce Live Agent supports additional properties.
+
+    | Property | Description | Required|
+    |    ---   |     ---     |   ---   |
+    `visitor_details`|A list of Salesforce fields that will be updated or created. If a field exists, the field will appear in both the transcript details as well as the visitor details. If the field doesn't exist, the field will only appear in the visitor details.|*Optional. Salesforce Live Agent only.*
+    `chat_established`|This flow will be triggered when an agent accepts the chat request.|*Optional*
+    `chat_ended`|This flow will be triggered when the user or agent ends the conversation.|*Optional*
+    `chat_request_failed`|This flow will be triggered if no agent is available, or every agent rejects the conversation.|*Optional*
+    `chat_agent_disconnect`|This flow will be triggered if the agent disconnects from the session.|*Optional*
+    `chat_transferred`|This flow will be triggered every time the conversation is transferred to another agent.|*Optional*
+    `queue_update`|This flow will be triggered every time the user's position in the queue changes.|*Optional*
+
+    For Salesforce Live Agent only, each of the four event handlers listed above has the following two fields.
+
+    | Property | Description | Required|
+    |    ---   |     ---     |   ---   |
+    `flow`|The flow to execute when the event occurs.|*Required for any callback event you wish to handle.*
+    `data`|The data to pass to the flow.|*Optional*
+
+    **Important!** In order to handle these callback flows, your bot will be automatically un-paused. At the end of each callback flow, **remember to use the `meya.pause` component to pause the bot again**, otherwise your use might see unexpected behaviour.
+
+    ### Assignee format
+    Please refer to the documentation for the particular customer service integration for the proper format of the `assignee` field and the assignment logic. For example, Intercom supports team and admin names.
+
+    ### Example
+    ```
+    transfer_to_agent:
+        component: human.transfer
+        properties:
+            text: >
+                One moment while I transfer you to a live agent who will
+                process your credit application. This may take a few minutes...
+            assignee: "Support"
+            note: |
+                Customer wants to apply for a card
+                name - {{ user.full_name }}
+                email - {{ user.email }}
+                dob - {{ user.dob }}
+                annual income - {{ user.annual_income }}
+    ```
+language: yaml
+tags: []
+expanded: false

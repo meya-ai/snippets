@@ -1,0 +1,14 @@
+---
+docstring: |
+    ## meya.pause
+    Pause the bot for this user.
+
+    If you're using any Salesforce Live Agent callback flows, the bot will be automatically un-paused so that it can execute the flow. **At the end of each callback flow you must remember to use the `meya.pause` component to pause the bot again**, otherwise the user may see unexpected behaviour.
+
+    **Caution! This component should be used in Salesforce Live Agent callback event handlers only.** Using `meya.pause` outside of a Live Agent callback flow will result in the bot being paused for that user until you explicitly **make an API call to un-pause it again**.
+
+    ### Properties
+    *None.*
+language: yaml
+tags: []
+expanded: false

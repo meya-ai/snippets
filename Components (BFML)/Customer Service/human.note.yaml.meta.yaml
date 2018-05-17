@@ -1,0 +1,13 @@
+---
+docstring: |
+    ## human.note
+    Send a note to your agents at various stages in the flow. This can include information collected by the bot about the customer, giving agents more insights.
+
+    ### Properties
+    | Property | Description | Required|
+    |    ---   |     ---     |   ---   |
+    `text`|The text to display to the user.|*Optional. Default: `null`*
+    `speech`|The text to speak to the user.|*Optional. Only applies to voice integrations.*
+language: yaml
+tags: []
+expanded: false
