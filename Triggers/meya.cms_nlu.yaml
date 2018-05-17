@@ -1,0 +1,6 @@
+triggers:
+    - type: meya.cms_nlu
+    properties:
+        space: <SPACE>
+        key: <KEY>
+        language: <LANGUAGE_CODE>

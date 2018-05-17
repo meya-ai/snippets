@@ -1,0 +1,23 @@
+---
+docstring: |
+    ## meya.cms_text
+    Displays text from Bot CMS based on the user's intent. Can be used with the `meya.cms_nlu` trigger to easily create an FAQ bot.
+
+    ### Properties
+    *None.*
+
+    ### Example
+    This single flow will answer any FAQ you've trained your bot to answer. It assumes that you have all of your FAQ question/answer pairs in a `space` called `faq`.
+    ```
+    triggers:
+        - type: meya.cms_nlu
+        properties:
+            space: faq
+    name: faq_flow
+    states:
+        cms_text_state:
+            component: meya.cms_text
+    ```
+language: yaml
+tags: []
+expanded: false
