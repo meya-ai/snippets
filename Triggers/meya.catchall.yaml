@@ -1,4 +1,4 @@
 triggers:
   - type: meya.catchall
-  properties:
+    properties:
         detect_language: <BOOLEAN>

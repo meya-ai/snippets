@@ -7,7 +7,7 @@ docstring: |
     ### Properties
     | Property | Description | Required|
     |    ---   |     ---     |   ---   |
-    `detect_language`|If checked, will set flow.language to the language the input was written in.|*Optional. Default: `false`*
+    `detect_language`|If checked, will set `flow.language` to the language the input was written in.|*Optional. Default: `false`*
     ### Flow scope variables
     The `meya.catchall` trigger sets a variable on the `flow` scope. It can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
 

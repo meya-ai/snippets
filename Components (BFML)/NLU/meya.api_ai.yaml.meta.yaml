@@ -33,6 +33,7 @@ docstring: |
     `parameters.simplified`|The query submitted to Dialogflow.
     `source`|The source Dialogflow agent.
     ### Example - Language Detection
+    You can use the `meya.api_ai` component to detect a user's language.
     Create a Dialogflow agent with both English and French language enabled. Create a `greetings` intent in the agent with English and French training phrases, such as `hello` and `bonjour`.
     Create a new flow called `language.yaml` and paste the following code.
     ```
@@ -58,7 +59,7 @@ docstring: |
             properties:
                 text: "Your language is {{ flow.language }}"
     ```
-    Test it out in the test chat window. Enter `hello` and the bot will respond `Your language is en`. Enter `bonjour` and the bot will say `Your language is fr`.
+    Test it out in the test chat window. Entering `hello` will match the `catchall` trigger and start the flow. The bot will say `Your language is` since it hasn't yet detected your language. Enter `hello` again and the bot will respond `Your language is en`. Clear the messages to start over. This time try entering `bonjour`. The bot will respond `Your language is fr`.
 language: yaml
 tags: []
 expanded: false
