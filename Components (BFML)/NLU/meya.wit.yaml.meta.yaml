@@ -13,6 +13,7 @@ docstring: |
     `latch_up`|If `true`, any confidence value greater than `min_confidence` will be rounded up to `1.0`, thus winning any intent collisions.` Confidence values less than `min_confidence` will be rounded down to `0.0`.|`Optional. Default: `false`*
     `scope`|Where to store the data. One of `flow`, `user`, or `bot`.|*Optional. Default: `flow`*
     `buttons`|A YAML list of buttons.|*Optional*
+    `cache_duration`|The number of seconds a request is cached. Set to 0 to force a new request. Note that shorter cache durations may increase latency in bot response since more API calls must be made.|*Optional. Default: `60`*
     **The user's intent will be available as `flow.intent`.**
     ### Transitions
     | Transition | Description | Required |
