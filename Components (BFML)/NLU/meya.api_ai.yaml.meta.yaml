@@ -8,7 +8,7 @@ docstring: |
     `text`|Text to display to the user. Can include Mustache syntax: `{{ flow.value }}`.|*Required*
     `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
     `client_access_token`|The Dialogflow client access token from your Dialogflow agent settings.|*Required*
-    `language`|A two letter language code matching one of the Dialogflow agent's languages. For example, `en` for English.|*Required*
+    `language`|A two letter language code matching one of the Dialogflow agent's languages. For example, `en` for English. If left blank, the bot will auto-detect the user's language and set `flow.language` to the appropriate language code.|*Optional. Default: blank (i.e. auto-detect)*
     `require_match`|If `false`, the flow will return the `no_match` action, which you can use to transition to another state.|*Optional. Default: `true`*
     `min_confidence`|The minimum confidence required to match the entity.|*Optional. Default: `0.67`*
     `latch_up`|If `true`, any confidence value greater than `min_confidence` will be rounded up to `1.0`, thus winning any intent collisions.` Confidence values less than `min_confidence` will be rounded down to `0.0`.|`Optional. Default: `false`*
@@ -32,6 +32,33 @@ docstring: |
     `fulfillment.speech`|The Dialogflow agent's response, if you've provided the app with responses.
     `parameters.simplified`|The query submitted to Dialogflow.
     `source`|The source Dialogflow agent.
+    ### Example - Language Detection
+    Create a Dialogflow agent with both English and French language enabled. Create a `greetings` intent in the agent with English and French training phrases, such as `hello` and `bonjour`.
+    Create a new flow called `language.yaml` and paste the following code.
+    ```
+    triggers:
+        - type: meya.catchall
+    name: language
+    states:
+        first:
+            component: meya.text
+            properties:
+                text: "Your language is {{ flow.language }}"
+
+        api_ai_state:
+            component: meya.api_ai
+            properties:
+                text: "Enter some text"
+                client_access_token: <YOUR_CLIENT_ACCESS_TOKEN>
+            transitions:
+                greeting: greeting
+
+        greeting:
+            component: meya.text
+            properties:
+                text: "Your language is {{ flow.language }}"
+    ```
+    Test it out in the test chat window. Enter `hello` and the bot will respond `Your language is en`. Enter `bonjour` and the bot will say `Your language is fr`.
 language: yaml
 tags: []
 expanded: false
