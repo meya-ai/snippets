@@ -11,6 +11,7 @@ docstring: |
     `intent_regex`|A regular expression to use to match the incoming intent. Used for advanced intent matching. If set, this overrides the `intent` field.|*Optional*
     `min_confidence`|The minimum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `0.67`*
     `max_confidence`|The maximum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `1.0`*
+    `cache_duration`|The number of seconds a request is cached. Set to `0` to force a new request. Note that shorter cache durations may increase latency in bot response since more API calls must be made.|*Optional. Default: `60`*
     ### Flow scope variables
     The following data are available on the `flow` scope. They can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
 
