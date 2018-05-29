@@ -33,9 +33,7 @@ docstring: |
     }
     ```
     ### Example - Language Detection
-    You can use the `meya.api_ai` trigger to detect a user's language.
-    Create a Dialogflow agent with both English and French language enabled. Create a `greetings` intent in the agent with English and French training phrases, such as `hello` and `bonjour`.
-    Create a new flow called `language.yaml` and paste the following code.
+    You can use the `meya.api_ai` trigger to detect a user's language. Start by creating a Dialogflow agent with both English and French language enabled. Then create a `greetings` intent in the agent with English and French training phrases, such as `hello` and `bonjour`. Finally, create a new flow called `language.yaml` and paste the following code.
     ```
     triggers:
       - type: meya.api_ai
