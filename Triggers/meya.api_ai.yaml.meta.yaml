@@ -6,7 +6,7 @@ docstring: |
     | Property | Description | Required|
     |    ---   |     ---     |   ---   |
     `client_access_token`|Your Dialogflow agent's client access token.|*Required*
-    `language`|Your Dialogflow agent's 2-letter ISO 639-1 language code.|*Required*
+    `language`|Your Dialogflow agent's 2-letter ISO 639-1 language code. If left blank, the bot will auto-detect the user's language and set `flow.language` to the appropriate language code.|*Optional. Default: `false`*
     `intent`|The name of the intent the user's input must match. If absent, any intent will match.|*Optional*
     `intent_regex`|A regular expression to use to match the incoming intent. Used for advanced intent matching. If set, this overrides the `intent` field.|*Optional*
     `min_confidence`|The minimum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `0.67`*
@@ -31,6 +31,22 @@ docstring: |
         "fruit_list": ["apples", "pears", "bananas"]
     }
     ```
+    ### Example - Language Detection
+    Create a Dialogflow agent with both English and French language enabled. Create a `greetings` intent in the agent with English and French training phrases, such as `hello` and `bonjour`.
+    Create a new flow called `language.yaml` and paste the following code.
+    ```
+    triggers:
+    - type: meya.api_ai
+        properties:
+            client_access_token: <YOUR_CLIENT_ACCESS_TOKEN>
+    name: language
+    states:
+        first:
+            component: meya.text
+            properties:
+                text: "Your language is {{ flow.language }}"
+    ```
+    Test it out in the test chat window. Enter `hello` and the bot will respond `Your language is en`. Enter `bonjour` and the bot will say `Your language is fr`.
 language: yaml
 tags: []
 expanded: false
