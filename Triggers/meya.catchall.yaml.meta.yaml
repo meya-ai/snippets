@@ -5,7 +5,9 @@ docstring: |
 
     Tip: Combine a `catchall` trigger with the `human.transfer` component to have the bot transfer to a human agent when it can't understand the user.
     ### Properties
-    *None.*
+    | Property | Description | Required|
+    |    ---   |     ---     |   ---   |
+    `detect_language`|If checked, will set flow.language to the language the input was written in.|*Optional. Default: `false`*
     ### Flow scope variables
     The `meya.catchall` trigger sets a variable on the `flow` scope. It can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
 
@@ -13,6 +15,22 @@ docstring: |
     |   ---    |     ---     |
     `value`|The user's original input.
     `_confidence`|The bot's confidence that this trigger is the best match given the user's input.
+    ### Example
+    Create a new flow `language.yaml`. Paste the following code into the flow.
+    ```
+    triggers:
+        - type: meya.catchall
+        properties:
+            detect_language: true
+    name: language
+    states:
+        first:
+            component: meya.text
+            properties:
+                text: "Your language is {{ flow.language }}"
+    ```
+    Enter `hello` and the bot will respond `Your language is en`. If you enter `bonjour` the bot should respond `Your language is fr`.
+    Now set `detect_language` to `false` in the trigger properties. Enter `hello` or `bonjour` and the bot will respond `Your language is` since it didn't detect the language.
 language: yaml
 tags: []
 expanded: false
