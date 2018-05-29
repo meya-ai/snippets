@@ -9,8 +9,37 @@ docstring: |
     `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
     `output`|The key used to store the data for subsequent steps in the flow.|*Optional. Default: `value`*
     `scope`|Where to store the data. One of `flow`, `user`, or `bot`.|*Optional. Default: `flow`*
+    `detect_language`|If checked, will set `flow.language` to the language the input was written in.|*Optional. Default: `false`*
     ### Transitions
     When the user submits their response, the `next` action is triggered. By default, this will trigger the next state. You can alter this by explicitly setting a transition for the `next` action in the `transitions` section.
+    ### Example - Language Detection
+    You can use the `meya.input_string` component to detect a user's language. Create a new flow called `language.yaml` and paste the following code.
+    ```
+    triggers:
+      - type: meya.catchall
+        properties:
+            detect_language: false
+    name: language
+    states:
+        first:
+            component: meya.text
+            properties:
+                text: "Your language is {{ flow.language }}"
+
+        input_state:
+            component: meya.input_string
+            properties:
+                text: "Enter some text"
+                detect_language: true
+                output: value
+                scope: flow
+
+        greeting:
+            component: meya.text
+            properties:
+                text: "Your language is {{ flow.language }}"
+    ```
+    Test it out in the test chat window. Entering `hello` will match the `catchall` trigger and start the flow. The bot will say `Your language is` since it hasn't yet detected your language. Enter `hello` again and the bot will respond `Your language is en`. Clear the messages to start over. This time try entering `bonjour`. The bot will respond `Your language is fr`.
 language: yaml
 tags: []
 expanded: false
