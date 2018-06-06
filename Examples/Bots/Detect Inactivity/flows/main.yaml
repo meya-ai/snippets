@@ -1,9 +1,0 @@
-name: main
-states:
-    update_last_seen:
-        component: update_last_seen
-
-    first:
-        component: meya.text
-        properties:
-            text: "This is the main flow!"
