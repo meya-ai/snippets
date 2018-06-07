@@ -12,6 +12,7 @@ docstring: |
     `min_confidence`|The minimum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `0.67`*
     `max_confidence`|The maximum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `1.0`*
     `subdomain`|The Luis.ai subdomain to use.|*Optional. Default: `westus`*
+    `cache_duration`|The number of seconds a request is cached. Set to `0` to force a new request. Note that shorter cache durations may increase latency in bot response since more API calls must be made.|*Optional. Default: `60`*
     ### Flow scope variables
     The following data are available on the `flow` scope. They can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
 

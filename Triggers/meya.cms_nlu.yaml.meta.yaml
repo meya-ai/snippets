@@ -2,7 +2,6 @@
 docstring: |
     ## meya.cms_nlu
     Uses a Bot CMS-trained NLU agent to determine the user's intent and trigger the flow if a matching intent is found.
-
     ### Properties
     | Property | Description | Required|
     |    ---   |     ---     |   ---   |
@@ -12,7 +11,7 @@ docstring: |
     `min_confidence`|The minimum confidence required to match the entity.|*Optional. Default: `0.67`*
     `detect_language`|If `true`, `{{ flow.language }}` will be set to the language the NLU agent detected from the user's input.|*Optional. Default: `false`*
     `use_keyword_fallback`|If checked, a keyword-based approach is used if no NLU spaces are provided.|*Optional*
-    
+    `cache_duration`|The number of seconds a request is cached. Set to `0` to force a new request. Note that shorter cache durations may increase latency in bot response since more API calls must be made.|*Optional. Default: `60`*
     ### Flow scope variables
     The following data are available on the `flow` scope. They can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
 
