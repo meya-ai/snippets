@@ -5,4 +5,4 @@
             flow: <YOUR_FLOW>
             period: <PERIOD> # seconds|minutes|hours|weeks|months|years
             interval: <INTERVAL> # e.g. 2
-            max_count: <MAX_COUNT> # e.g. 30
+            max_count: <MAX_COUNT> # e.g. 3
