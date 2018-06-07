@@ -3,7 +3,6 @@ triggers:
     settings:
         ignorecase: true
         keyword: main
-name: main
 states:
     compare_user_type:
         component: complex_transition

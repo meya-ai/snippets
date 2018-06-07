@@ -39,7 +39,6 @@ docstring: |
       - type: meya.api_ai
         properties:
             client_access_token: <YOUR_CLIENT_ACCESS_TOKEN>
-    name: language
     states:
         first:
             component: meya.text

@@ -2,7 +2,6 @@ triggers:
   - type: cms_nlu
     properties:
         space: faq
-name: faq
 states:
     say_answer:
         component: meya.cms_text
