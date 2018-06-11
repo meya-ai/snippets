@@ -2,6 +2,7 @@
 docstring: |
     ## meya.schedule
     Schedule a flow to run either at set periodic intervals, or at specific times using cron.
+    Scheduled flows expire after 10 iterations or `max_count` iterations, whichever is lower.
     ### Properties
     These properties are common to both periodic and cron versions of `meya.schedule`.
     
@@ -11,7 +12,7 @@ docstring: |
     `action`|Specify an action used to start the flow at a particular state. See [routing](http://docs.meya.ai/docs/flow-routing) for more details.|*Optional.*
     `data`|A YAML dictionary containing data to pass into the specified flow.|*Optional*
     `tag`|A unique ID for this schedule. It is necessary in order to programmatically stop schedules. If you don't set this, you will need to stop the scheduled flow manually from the **Schedules** tab from the bot's dashboard.|*Optional*
-    `max_count`|The maximum number of times this schedule will run.|*Optional*
+    `max_count`|The maximum number of times this schedule will run.|*Optional. Default: `10`*
 
     #### Periodic
     These properties are only set when using the periodic version of `meya.schedule`.

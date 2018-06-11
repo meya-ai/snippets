@@ -19,7 +19,6 @@ docstring: |
       - type: meya.catchall
         properties:
             detect_language: false
-    name: language
     states:
         first:
             component: meya.text

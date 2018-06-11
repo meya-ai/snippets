@@ -10,7 +10,6 @@ docstring: |
         settings:
             ignorecase: true
             keyword: hi
-    name: hello_world
     states:
         first:
             component: hello_world

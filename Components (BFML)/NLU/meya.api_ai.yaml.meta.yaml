@@ -38,7 +38,6 @@ docstring: |
     ```
     triggers:
         - type: meya.catchall
-    name: language
     states:
         first:
             component: meya.text

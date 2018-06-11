@@ -13,7 +13,6 @@ docstring: |
         - type: meya.cms_nlu
         properties:
             space: faq
-    name: faq_flow
     states:
         cms_text_state:
             component: meya.cms_text

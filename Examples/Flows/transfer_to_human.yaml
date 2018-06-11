@@ -1,6 +1,5 @@
 triggers:
     - type: meya.catchall
-name: transfer_to_human
 states:
     ask_to_transfer:
         component: meya.nlp_yes_no

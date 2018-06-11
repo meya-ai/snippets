@@ -1,6 +1,5 @@
 triggers:
   - type: start_chat
-name: welcome
 states:
     say_welcome:
         component: meya.text

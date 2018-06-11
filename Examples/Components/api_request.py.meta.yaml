@@ -10,7 +10,6 @@ docstring: |
         settings:
             ignorecase: true
             keyword: hi
-    name: api_request
     states:
         first:
             component: api_request
