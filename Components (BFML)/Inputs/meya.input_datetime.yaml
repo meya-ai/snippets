@@ -6,4 +6,5 @@
             scope: <SCOPE> # e.g. flow|user|bot
             timezone: <TIMEZONE> # e.g. UTC
             timezone_scope: <SCOPE> # e.g. flow|user|bot
+            multi_lang_support_lib: <BOOLEAN> # e.g. true
             require_match: <BOOLEAN>
