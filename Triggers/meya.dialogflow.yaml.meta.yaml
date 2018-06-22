@@ -45,7 +45,7 @@ docstring: |
             properties:
                 text: "Your language is {{ flow.language }}"
     ```
-    Test it out in the test chat window. Entering `hello` will match the `api_ai` trigger and start the flow. The bot will say `Your language is en`. Clear the messages to start over. This time try entering `bonjour`. The bot will respond `Your language is fr`.
+    Test it out in the test chat window. Entering `hello` will match the `dialogflow` trigger and start the flow. The bot will say `Your language is en`. Clear the messages to start over. This time try entering `bonjour`. The bot will respond `Your language is fr`.
 language: yaml
 tags: []
 expanded: false
