@@ -2,7 +2,7 @@
 docstring: |
     ## meya.dialogflow
     Accepts input from the user and matches it against a pre-trained Dialogflow v2 agent. It also extracts entity data and makes that available on `flow` scope.
-    *Note*: This component requires a Dialogflow v2 agent and the <a href="https://docs.meya.ai/v1.2/docs/dialogflow-v2-overview" target="_blank">Dialogflow integration</a>. If you are using a v1 agent, <a href="https://dialogflow.com/docs/reference/v1-v2-migration-guide" target="_blank">upgrade your agent</a> or use the `meya.api_ai` component.
+    *Note*: This component requires a Dialogflow v2 agent and the [Dialogflow integration](https://docs.meya.ai/v1.2/docs/dialogflow-v2-overview) enabled. If you are using a v1 agent, [upgrade your agent](https://dialogflow.com/docs/reference/v1-v2-migration-guide) or use the `api_ai` trigger.
     ### Properties
     | Property | Description | Required |
     |   ----   |     ---     |   ----   |
