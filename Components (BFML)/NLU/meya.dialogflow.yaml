@@ -21,3 +21,8 @@
         properties:
             text: "Good"
         return: true
+    ambiguous_state:
+        component: meya.text
+        properties:
+            text: "Ambiguous"
+        return: true
