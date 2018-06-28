@@ -2,6 +2,7 @@
 docstring: |
     ## meya.dialogflow
     Uses third party NLU service Dialogflow, to determine the user's intent and trigger the flow if a matching intent is found.
+    *Note*: This trigger requires a Dialogflow v2 agent and the <a href="https://docs.meya.ai/v1.2/docs/dialogflow-v2-overview" target="_blank">Dialogflow integration</a> enabled. If you are using a v1 agent, <a href="https://dialogflow.com/docs/reference/v1-v2-migration-guide" target="_blank">upgrade your agent</a> or use the `api_ai` trigger.
     ### Properties
     | Property | Description | Required|
     |    ---   |     ---     |   ---   |
