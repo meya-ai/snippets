@@ -8,6 +8,7 @@ docstring: |
     `speech`|Text to speak to the user. This field also accepts SSML markup to customize pronunciation.|*Optional. Defaults to value of `text` property*
     `timezone`|The timezone to use for interpreting times. Entered in Olson Database format. If not set, the component will attempt to read the timezone from the datastore.|*Optional. Default: `GMT`*
     `timezone_scope`|The datastore scope from which to read the timezone.|*Optional. Default: `user`*
+    `parser`|If `V2.0`, use an NLU date parsing library that supports languages other than English.|*Optional. Default: `V1.0`*
     `require_match`|If `false`, the flow will return the `no_match` action, which you can use to transition to another state.|*Optional. Default: `true`*
     `output`|The key used to store the data for subsequent steps in the flow.|*Optional. Default: `value`*
     `scope`|Where to store the data. One of `flow`, `user`, or `bot`.|*Optional. Default: `flow`*
