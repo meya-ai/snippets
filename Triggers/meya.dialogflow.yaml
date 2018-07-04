@@ -1,0 +1,7 @@
+triggers:
+  - type: meya.dialogflow
+    properties:
+        project_id: <YOUR_GOOGLE_PROJECT_ID>
+        language: <LANGUAGE_CODE>
+        intent: <INTENT_NAME>
+        min_confidence: <CONFIDENCE_VALUE>

@@ -1,0 +1,28 @@
+    dialogflow_state:
+        component: meya.dialogflow
+        properties:
+            text: "Your question here"
+            project_id: <YOUR_GOOGLE_PROJECT_ID>
+            language: <LANGUAGE_CODE> # e.g. en
+            error_message: "I don't understand"
+            min_confidence: <MIN_CONFIDENCE> # e.g. 0.8
+            require_match: <BOOLEAN> # e.g. false
+        transitions:
+            bad: bad_state
+            good: good_state
+            no_match: ambiguous_state
+    bad_state:
+        component: meya.text
+        properties:
+            text: "Bad"
+        return: true
+    good_state:
+        component: meya.text
+        properties:
+            text: "Good"
+        return: true
+    ambiguous_state:
+        component: meya.text
+        properties:
+            text: "Ambiguous"
+        return: true

@@ -1,0 +1,52 @@
+---
+docstring: |
+    ## meya.dialogflow
+    Uses third party NLU service Dialogflow, to determine the user's intent and trigger the flow if a matching intent is found.
+    *Note*: This trigger requires a Dialogflow v2 agent and the [Dialogflow integration](https://docs.meya.ai/v1.2/docs/dialogflow-v2-overview) enabled. If you are using a v1 agent, [upgrade your agent](https://dialogflow.com/docs/reference/v1-v2-migration-guide) or use the `api_ai` trigger.
+    ### Properties
+    | Property | Description | Required|
+    |    ---   |     ---     |   ---   |
+    `project_id`|The Google Project ID from your Dialogflow agent settings.|*Required*
+    `language`|A two letter language code matching one of the Dialogflow agent's languages. For example, `en` for English. If omitted, the bot will auto-detect the user's language and set `flow.language` to the appropriate language code.|*Optional. Default: blank (i.e. auto-detect)*
+    `intent`|The name of the intent the user's input must match. If absent, any intent will match.|*Optional*
+    `intent_regex`|A regular expression to use to match the incoming intent. Used for advanced intent matching. If set, this overrides the `intent` field.|*Optional*
+    `min_confidence`|The minimum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `0.67`*
+    `max_confidence`|The maximum confidence that will trigger the intent. A value between `0.0` and `1.0`.|*Optional. Default: `1.0`*
+    `cache_duration`|The number of seconds a request is cached. Set to `0` to force a new request. Note that shorter cache durations may increase latency in bot response since more API calls must be made.|*Optional. Default: `60`*
+    ### Flow scope variables
+    The following data are available on the `flow` scope. They can be accessed from a flow using Mustache syntax: `{{ flow.value }}`, or from a Python component using `self.db.flow.get("value")`.
+
+    | Property | Description |
+    |    ---   |     ---     |
+    `_confidence`|The Dialogflow agent's confidence of the match.
+    `_intent`|The intent the Dialogflow agent matched.
+    `value`|The user's original text.
+    `fulfillment.speech`|The Dialogflow agent's response if you've set fulfillment phrases within Dialogflow.
+    `parameters.simplified`|A simplified version of the query sent to Dialogflow.
+    `source`|The source Dialogflow agent.
+
+    Matched entities will be available on `flow` scope using the entity name and also as a list by appending `_list`. For example the uttrance, "I love apples, pears and bananas." would result in the following `flow` scope data.
+    ```
+    {
+        "intent": "fruits"
+        "fruit": "apples",
+        "fruit_list": ["apples", "pears", "bananas"]
+    }
+    ```
+    ### Example - Language Detection
+    You can use the `meya.dialogflow` trigger to detect a user's language. Start by creating a Dialogflow v2 agent with both English and French language enabled. Then create a `greetings` intent in the agent with English and French training phrases, such as `hello` and `bonjour`. Finally, create a new flow called `language.yaml` and paste the following code.
+    ```
+    triggers:
+      - type: meya.dialogflow
+        properties:
+            project_id: <YOUR_GOOGLE_PROJECT_ID>
+    states:
+        first:
+            component: meya.text
+            properties:
+                text: "Your language is {{ flow.language }}"
+    ```
+    Test it out in the test chat window. Entering `hello` will match the `dialogflow` trigger and start the flow. The bot will say `Your language is en`. Clear the messages to start over. This time try entering `bonjour`. The bot will respond `Your language is fr`.
+language: yaml
+tags: []
+expanded: false
